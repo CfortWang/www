@@ -1,22 +1,29 @@
-<div class="row border-bottom">
-    <nav class="navbar navbar-static-top white-bg" role="navigation" style="margin-bottom: 0">
+<nav class="navbar seedo-nav navbar-default" role="navigation">
+    <div class="container-fluid">
         <div class="navbar-header">
-            <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i> </a>
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example-navbar-collapse" style="margin-top: 22px">
+                <span class="sr-only">切换导航</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <img src="./img/xidou-icon.png">
         </div>
-        <ul class="nav navbar-top-links navbar-right">
-            <li>
-                <i class="fa fa-globe"></i>
-                <select id="lang">
-                    <option value="zh" {{App::getLocale() === 'zh' ? 'selected':null}}>zh - 中國</option>
-                    <option value="en" {{App::getLocale() === 'en' ? 'selected':null}}>en - English</option>
-                    <option value="ko" {{App::getLocale() === 'ko' ? 'selected':null}}>ko - 한국어</option>
-                </select>
-            </li>
-            <li>
-                <a id="logout-btn">
-                    <i class="fa fa-sign-out"></i> Log out
-                </a>
-            </li>
-        </ul>
-    </nav>
-</div>
+        <div class="collapse navbar-collapse" id="example-navbar-collapse">
+            <ul class="nav navbar-nav nav-right">
+                <li class="nav-li nav-index" >
+                    <a class="nav-a" href="/">首页</a>
+                </li>
+                <li class="nav-li nav-product">
+                    <a class="nav-a" href="product.html" target="_self">产品介绍</a>
+                </li>
+                <li class="nav-li nav-introduction">
+                    <a class="nav-a" href="introduction.html" target="_self">公司介绍</a>
+                </li>
+                <li class="nav-li nav-career">
+                    <a class="nav-a" href="career.html" target="_self">合作人计划</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

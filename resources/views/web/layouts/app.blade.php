@@ -5,6 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bean Pop</title>
     <link rel="icon" href="/img/logo/favicon.png" type="image/x-icon">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <link rel="stylesheet" type="text/css" href="./css/swiper.min.css" />
+    <script src="./js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     @yield('stylesheet')
     @yield('css')
 
@@ -13,7 +21,6 @@
   <!-- Wrapper-->
     <div id="wrapper">
         <!-- Navigation -->
-        @include('web.layouts.navigation')
 
         <!-- Page wraper -->
         <div id="page-wrapper" class="gray-bg">
