@@ -49,19 +49,6 @@
 @section('scripts')
 <script type="text/javascript" src="http://webapi.amap.com/maps?v=1.4.6&key=b6f0744f2680a9728fc7fcc2244b0d48&plugin=AMap.Autocomplete"></script> 
 <script>
-    var mySwiper = new Swiper('.swiper-container', {
-        autoplay: true, //等同于以下设置
-        pagination: {
-            el: '.swiper-pagination',
-            dynamicBullets: true,
-            clickable: true,
-        },
-        /*autoplay: {
-          delay: 3000,
-          stopOnLastSlide: false,
-          disableOnInteraction: true,
-          },*/
-    });
     $('.nav-introduction').addClass('active');
     var map = new AMap.Map('map',{
             zoom:15,

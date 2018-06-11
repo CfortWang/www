@@ -16,4 +16,5 @@ Route::group(['namespace' => 'Web'], function() {
     Route::get('product.html', 'ProductController@index')->name("www_product");
     Route::get('introduction.html', 'IntroductionController@index')->name("www_introduction");
     Route::get('career.html', 'CareerController@index')->name("www_career");
+    Route::get('join.html', 'JoinController@index')->name("www_join");
 });
