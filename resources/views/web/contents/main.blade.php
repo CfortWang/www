@@ -24,51 +24,7 @@
         <div class="company-1">公司介绍</div>
         <div class="company-2">SEEDO是一个善于利用创新思维来创造新鲜事物的年轻团队</div>
     </div>
-    <div class="team">
-        <div class="team-contain">
-            <div class="row">
-                <div class="col-sm-12">
-                    <div class="team-text">团队介绍</div>
-                    <div class="col-sm-4">
-                        <div class="team-text2">
-                            <img src="./img/6.png" class="team-img" />
-                            <div class="team-text2-1">
-                                <span class="team-text2-2">金煊政</span>
-                                <span>创始人兼首席执行官</span>
-                            </div>
-                            <div class="team-text2-3">
-                                喜豆APP案件力度嘎多思考国家队爱的时光记录卡进度噶速度了更加阿萨德了噶几点过来看噶价格拉卡接收到国家的设计工具按国家圣诞快乐国家撒大哥阿嘎都是
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-4">
-                        <div class="team-text2">
-                            <img src="./img/6.png" class="team-img" />
-                            <div class="team-text2-1">
-                                <span class="team-text2-2">金煊政</span>
-                                <span>创始人兼首席执行官</span>
-                            </div>
-                            <div class="team-text2-3">
-                                喜豆APP案件力度嘎多思考国家队爱的时光记录卡进度噶速度了更加阿萨德了噶几点过来看噶价格拉卡接收到国家的设计工具按国家圣诞快乐国家撒大哥阿嘎都是
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-4">
-                        <div class="team-text2">
-                            <img src="./img/6.png" class="team-img" />
-                            <div class="team-text2-1">
-                                <span class="team-text2-2">金煊政</span>
-                                <span>创始人兼首席执行官</span>
-                            </div>
-                            <div class="team-text2-3">
-                                喜豆APP案件力度嘎多思考国家队爱的时光记录卡进度噶速度了更加阿萨德了噶几点过来看噶价格拉卡接收到国家的设计工具按国家圣诞快乐国家撒大哥阿嘎都是
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+   
     <div id="right-nav">
         <div class="w">
             <ul id="right-nav-list1">

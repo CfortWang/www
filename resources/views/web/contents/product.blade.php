@@ -149,5 +149,11 @@
 @section('scripts')
 <script>
     $('.nav-product').addClass('active');
+    $('.toggle').click(function(){
+        $('.toggle').removeClass('par-active');
+        $(this).addClass('par-active');
+        $('.slideBox').hide();
+        $('.'+$(this).data('class')).show();
+    })
 </script>
 @endsection
