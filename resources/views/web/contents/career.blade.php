@@ -23,7 +23,7 @@
     </div>
     <div class="w">
         <div class="join-pic-div">
-            <a href="join.html"><img src="./img/join-icon.png" class="join-pic-img" style="margin-top: -136px;width: 108px;height: auto;"></a>
+            <a href="/join"><img src="./img/join-icon.png" class="join-pic-img" style="margin-top: -136px;width: 108px;height: auto;"></a>
         </div>
     </div>
 </div>
