@@ -13,8 +13,8 @@
 
 Route::group(['namespace' => 'Web'], function() {
     Route::get('/', 'MainController@index')->name("www_main");
-    Route::get('product.html', 'ProductController@index')->name("www_product");
-    Route::get('introduction.html', 'IntroductionController@index')->name("www_introduction");
-    Route::get('career.html', 'CareerController@index')->name("www_career");
-    Route::get('join.html', 'JoinController@index')->name("www_join");
+    Route::get('product', 'ProductController@index')->name("www_product");
+    Route::get('introduction', 'IntroductionController@index')->name("www_introduction");
+    Route::get('career', 'CareerController@index')->name("www_career");
+    Route::get('join', 'JoinController@index')->name("www_join");
 });
