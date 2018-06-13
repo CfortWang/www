@@ -72,8 +72,13 @@
         });
     });
     $('.promote').click(function() {
-        $(this).next().toggle();
+        
     })
+    $(".promote-img").on("mouseenter", function () {
+        $(this).parent().parent().next().show();
+    }).on("mouseleave", function () {
+        $(this).parent().parent().next().hide();
+    });
     var timer = null;
     $('#up').click(function(){
         cancelAnimationFrame(timer);
