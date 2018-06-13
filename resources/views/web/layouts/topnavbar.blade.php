@@ -21,7 +21,7 @@
                     <a class="nav-a" href="/introduction" target="_self">公司介绍</a>
                 </li>
                 <li class="nav-li nav-career">
-                    <a class="nav-a" href="/career" target="_self">合作人计划</a>
+                    <a class="nav-a" href="/career" target="_self">合伙人计划</a>
                 </li>
             </ul>
         </div>

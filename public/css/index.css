@@ -36,7 +36,7 @@
 
 .company-1 {
     text-align: center;
-    font-size: 32px;
+    font-size: 24px;
     font-weight: 800;
     padding: 6px 12px;
     padding-top: 80px;
@@ -44,7 +44,7 @@
 
 .company-2 {
     padding:55px 12px;
-    font-size: 18px;
+    font-size: 16px;
 }
 
 .promote {
@@ -168,6 +168,8 @@
     text-align: center;
     padding: 40px 20px;
     width: 100%;
+    font-size: 12px;
+    color: #666;
 }
 
 .promoto-qr {
@@ -324,10 +326,7 @@
 	padding-top: 80px;
 	padding-bottom: 30px;
 }
-/*.product-difference{
-	width: 80%;
-	margin:auto;
-}*/
+
 .difference-label{
 	padding-top: 30px;
 	padding-bottom: 15px;
@@ -344,9 +343,7 @@
 .company-introduction{
 	text-align: center;
 }
-.introduction-top{
 
-}
 .introduction-title{
 	font-weight: 710;
     font-size: 24px;
@@ -527,9 +524,10 @@
     max-width: 1280px;
     margin: 0 auto;
 }
-.product-div p{
-    color: #666;
-}
 .different-text{
     line-height: 24px;
+}
+.seedo-code-p-text{
+    font-size: 16px;
+    color: #666;
 }

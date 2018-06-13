@@ -54,9 +54,9 @@
             zoom:15,
         });
     marker = new AMap.Marker({
-        position: new AMap.LngLat(113.941744,22.527855),
+        position: new AMap.LngLat(113.941717,22.527875),
     });
     map.add(marker);
-    map.setZoomAndCenter(18, [113.941744, 22.527855]);
+    map.setZoomAndCenter(18, [113.941717,22.527875]);
 </script>
 @endsection

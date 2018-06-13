@@ -43,17 +43,16 @@
 @section('scripts')
 <script>
     var mySwiper = new Swiper('.swiper-container', {
-        autoplay: true, //等同于以下设置
+        autoplay:true,
         pagination: {
             el: '.swiper-pagination',
             dynamicBullets: true,
             clickable: true,
         },
-        /*autoplay: {
-          delay: 3000,
-          stopOnLastSlide: false,
-          disableOnInteraction: true,
-          },*/
+        paginationClickable: true,
+        centeredSlides: true,
+        loop : true,
+        // autoplayDisableOnInteraction: false,
     });
     $('.nav-index').addClass('active');
 </script>

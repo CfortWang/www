@@ -17,9 +17,9 @@
                 </div>
                 <div class="col-sm-6" style="text-align: left">
                     <p class="seedo-code-p">喜豆码</p>
-                    <p>喜豆码将附着在零售类产品上,用户通过扫描,可免费参与平台提供的竞猜活动,有机会获得丰厚奖品。</p>
-                    <p>喜豆码可在所有零售类产品上使用,目前以酒类产品优先,在酒类产品的流通使用中,能提高大概3-10%左右的销量。</p>
-                    <p>喜豆码让商家和用户之间产生连接点,并持续维持。</p>
+                    <p class="seedo-code-p-text">喜豆码将附着在零售类产品上,用户通过扫描,可免费参与平台提供的竞猜活动,有机会获得丰厚奖品。</p>
+                    <p class="seedo-code-p-text">喜豆码可在所有零售类产品上使用,目前以酒类产品优先,在酒类产品的流通使用中,能提高大概3-10%左右的销量。</p>
+                    <p class="seedo-code-p-text">喜豆码让商家和用户之间产生连接点,并持续维持。</p>
                 </div>
             </div>
         </div>
@@ -83,9 +83,9 @@
                 <div class="col-sm-12">
                     <div class="col-sm-6" style="text-align: left">
                         <p class="seedo-code-p">奖品规划</p>
-                        <p>基于不同传播主题、合作品牌</p>
-                        <p>不断更新奖品及活动形式， 让用户对平台</p>
-                        <p>产生持续性关注与依赖。</p>
+                        <p class="seedo-code-p-text">基于不同传播主题、合作品牌</p>
+                        <p class="seedo-code-p-text">不断更新奖品及活动形式， 让用户对平台</p>
+                        <p class="seedo-code-p-text">产生持续性关注与依赖。</p>
                     </div>
                     <div class="col-sm-6" >
                         <img src="./img/xidouma.png" class="product-max-img"/>
@@ -110,15 +110,15 @@
         <div class="parBd clearfix">
             <div class="slideBox ad">
                 <p class="product-div-ad-title"><img src="./img/p_ad_title.png" class="product-max-img"></p>
-                <p><img src="./img/p_ad.png" class="product-max-img"></p>
+                <p class="seedo-code-p-text"><img src="./img/p_ad.png" class="product-max-img"></p>
             </div>
             <div class="slideBox shop" style="display: none;">
                 <p class="product-div-ad-title"><img src="./img/p_shop_title.png" class="product-max-img"></p>
-                <p><img src="./img/p_shop.png" class="product-max-img"></p>
+                <p class="seedo-code-p-text"><img src="./img/p_shop.png" class="product-max-img"></p>
             </div>
             <div class="slideBox user" style="display: none;">                
                 <p class="product-div-ad-title"><img src="./img/p_user_title.png" class="product-max-img"></p>
-                <p><img src="./img/p_user.png" class="product-max-img"></p>
+                <p class="seedo-code-p-text"><img src="./img/p_user.png" class="product-max-img"></p>
             </div>
         </div>
     </div>
@@ -127,11 +127,11 @@
         <p class="seedo-code-p" style="padding-top:0px">VISION</p>
         <img src="./img/vision.png" class="product-max-img">
         <p class="vision-title">带动线下实体经济</p>
-        <p >将传播、娱乐、奖励机制相结合，打造互动竞猜传播平台， 用互联网产品刺激线下消费，助力实体经济增长。</p>
+        <p class="seedo-code-p-text">将传播、娱乐、奖励机制相结合，打造互动竞猜传播平台， 用互联网产品刺激线下消费，助力实体经济增长。</p>
         <p class="vision-title">资本市场进入</p>
-        <p >与资本深层合作，主导小额高效投资，为商业伙伴带来创造更大价值。</p>
+        <p class="seedo-code-p-text">与资本深层合作，主导小额高效投资，为商业伙伴带来创造更大价值。</p>
         <p class="vision-title">海购电商资源对接</p>
-        <p >后期将接入海购电商资源， 融合直播、视频、货源追溯等功能点，提供优越体验的海购平台。</p>
+        <p class="seedo-code-p-text">后期将接入海购电商资源， 融合直播、视频、货源追溯等功能点，提供优越体验的海购平台。</p>
     </div>
     <div id="right-nav">
         <div class="w">
