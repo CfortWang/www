@@ -17,7 +17,6 @@
                 </div>
                 <div class="col-sm-6" style="text-align: left">
                     <p class="seedo-code-p">喜豆码</p>
-                    <p>SEEDO QR code</p>
                     <p>喜豆码将附着在零售类产品上,用户通过扫描,可免费参与平台提供的竞猜活动,有机会获得丰厚奖品。</p>
                     <p>喜豆码可在所有零售类产品上使用,目前以酒类产品优先,在酒类产品的流通使用中,能提高大概3-10%左右的销量。</p>
                     <p>喜豆码让商家和用户之间产生连接点,并持续维持。</p>
@@ -83,10 +82,10 @@
            <div class="row">
                 <div class="col-sm-12">
                     <div class="col-sm-6" style="text-align: left">
-                        <p class="seedo-code-p">奖品规则</p>
-                        <p>基于不同传播主题</p>
-                        <p>合作品牌将不断更新奖品及活动形式,让用户对平台</p>
-                        <p>产生持续性关注于依赖。</p>
+                        <p class="seedo-code-p">奖品规划</p>
+                        <p>基于不同传播主题、合作品牌</p>
+                        <p>不断更新奖品及活动形式， 让用户对平台</p>
+                        <p>产生持续性关注与依赖。</p>
                     </div>
                     <div class="col-sm-6" >
                         <img src="./img/xidouma.png" class="product-max-img"/>
@@ -124,10 +123,11 @@
         </div>
     </div>
     <div class="product-div">
-        <p class="seedo-code-p">产品愿景</p>
+        <p class="seedo-code-p" style="padding-bottom:15px">产品愿景</p>
+        <p class="seedo-code-p" style="padding-top:0px">VISION</p>
         <img src="./img/vision.png" class="product-max-img">
         <p class="vision-title">带动线下实体经济</p>
-        <p >将传播、娱乐、奖励机制相结合，打造互动竞猜传播平台， 用互联网产品刺激线下消费，助力线下经济增长。</p>
+        <p >将传播、娱乐、奖励机制相结合，打造互动竞猜传播平台， 用互联网产品刺激线下消费，助力实体经济增长。</p>
         <p class="vision-title">资本市场进入</p>
         <p >与资本深层合作，主导小额高效投资，为商业伙伴带来创造更大价值。</p>
         <p class="vision-title">海购电商资源对接</p>
@@ -135,7 +135,6 @@
     </div>
     <div id="right-nav">
         <div class="w">
-            
             <ul id="right-nav-list1">
                 <li><a class="normal-number"><img src="./img/phone.png" style="width: 40px;height: 40px;margin: 10px;"></a>
                     <div style="font-size: 14px;color:white;">0755-83830566</div>
