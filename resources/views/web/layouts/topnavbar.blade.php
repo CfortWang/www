@@ -15,13 +15,13 @@
                     <a class="nav-a" href="/">首页</a>
                 </li>
                 <li class="nav-li nav-product">
-                    <a class="nav-a" href="product.html" target="_self">产品介绍</a>
+                    <a class="nav-a" href="/product" target="_self">产品介绍</a>
                 </li>
                 <li class="nav-li nav-introduction">
-                    <a class="nav-a" href="introduction.html" target="_self">公司介绍</a>
+                    <a class="nav-a" href="/introduction" target="_self">公司介绍</a>
                 </li>
                 <li class="nav-li nav-career">
-                    <a class="nav-a" href="career.html" target="_self">合作人计划</a>
+                    <a class="nav-a" href="/career" target="_self">合作人计划</a>
                 </li>
             </ul>
         </div>
