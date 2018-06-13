@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bean Pop</title>
-    <link rel="icon" href="/img/logo/favicon.png" type="image/x-icon">
+    <link rel="icon" href="/img/seedo.ico" type="image/x-icon">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <link rel="stylesheet" type="text/css" href="./css/swiper.min.css" />
