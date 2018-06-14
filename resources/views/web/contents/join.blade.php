@@ -100,27 +100,29 @@
                           <div>
                               <i class="customer"></i>我们的服务专员可在什么时候联系您？
                           </div>
-                        <div style="display:inline-block;max-width:150px">
+                        <div style="display:inline-block;max-width:81px">
                             <div class="input-group">
                                 <span class="input-group-addon">周</span>
-                                <input type="text" class="form-control" style="width:100px">
+                                <input type="text" class="form-control" style="width:40px" value="一">
                             </div>
                         </div>
-                        <!-- <span class="join-line"></span> -->
-                        <div style="display:inline-block;max-width:150px">
+                        <span class="join-line"></span>
+                        <div style="display:inline-block;max-width:81px">
                             <div class="input-group">
                             <span class="input-group-addon">周</span>
-                            <input type="text" class="form-control" style="width:100px">
+                            <input type="text" class="form-control" style="width:40px" value="五">
                             </div>
                         </div>
+                        <div style="display:inline-block;width:100px"></div>
                         <div style="display:inline-block;max-width:100px">
                             <div class="input-group">
-                                <input type="text" class="form-control timepicker" >
+                                <input type="text" class="form-control timepicker" value="8:30">
                             </div>
                         </div>
+                        <span class="join-line"></span>
                         <div style="display:inline-block;max-width:100px">
                             <div class="input-group">
-                                <input type="text" class="form-control timepicker" >
+                                <input type="text" class="form-control timepicker" value="18:30" >
                             </div>
                         </div>                        
                     </div>
@@ -130,7 +132,7 @@
         </div>
     </div>
     <div class="join-contain" style="text-align:center;margin-bottom:50px;margin-top:30px">
-        <button class="btn btn-warning">提交申请</button>
+        <button class="btn btn-warning" style="padding: 6px 25px;border-radius: 13px;">提交申请</button>
     </div>
 @endsection
 

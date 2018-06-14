@@ -584,7 +584,12 @@
     margin-right: 0.3em;
 }
 .join-line{
-    display: inline-block;  
-    width: 150px;  
-    border-top: 1px solid #ccc ;  
+    background: #ddd;
+    margin-top: 4px;
+    display: inline-block;
+    width: 18px;
+    height: 1px;
+    _overflow: hidden;
+    vertical-align: middle;
+    margin-top: -27px;
 }
