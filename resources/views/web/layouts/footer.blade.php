@@ -5,7 +5,7 @@
                 </div>
                 <div class="col-sm-4 contact">
                     <div class="contact-info">
-                        <span>联系方式:Contact information</span>
+                        <span>联系方式:</span>
                         <span style="color:gray;">———————————————————</span>
                     </div>
                     <div class="contact-msg">

@@ -7,9 +7,9 @@
 
 @section('content')
 <div class="career">
-    <img src="./img/planbanner.png" class="career-img">
+    <img src="./img/planbanner.jpg" class="career-img">
     <img src="./img/teampeople.jpg" class="career-max-img">
-    <img src="./img/planteam.png" class="career-img" >
+    <img src="./img/planteam.jpg" class="career-img" >
     <img src="./img/Join.png" class="career-max-img" style="margin-top: 30px">
 </div>  
 <div id="right-nav">

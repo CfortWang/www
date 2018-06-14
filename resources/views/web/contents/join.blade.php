@@ -106,7 +106,7 @@
                                 <input type="text" class="form-control" style="width:100px">
                             </div>
                         </div>
-                        <!-- <span class="join-line"></span> -->
+                        <span class="join-line"></span>
                         <div style="display:inline-block;max-width:150px">
                             <div class="input-group">
                             <span class="input-group-addon">周</span>

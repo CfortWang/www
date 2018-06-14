@@ -13,11 +13,11 @@
                     <div class="col-sm-12">
                         <div class="introduction-title">公司介绍</div>
                         <div>
-                             <img src="./img/introduce.png" class="introduction-img">
+                             <img src="./img/introduce.jpg" class="introduction-img">
                         </div>
                         <div class="introduction-title">公司结构</div>
                         <div>
-                             <img src="./img/structure.png" class="introduction-img">
+                             <img src="./img/structure.jpg" class="introduction-img">
                         </div>
                         <div class="introduction-brand">合作品牌及机构</div>
                         <div style="margin-bottom: 30px">
