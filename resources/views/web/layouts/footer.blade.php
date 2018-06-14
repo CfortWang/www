@@ -62,7 +62,7 @@
     <script>
     $(function() {
         $(window).scroll(function() {
-            if ($(window).scrollTop() >= 84) {
+            if ($(window).scrollTop() >= 1) {
                 $('.seedo-nav').addClass('fix_nav');
                 $('#up').show();
             } else {
