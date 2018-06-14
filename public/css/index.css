@@ -33,7 +33,16 @@
     background: white;
     text-align: center;
 }
-
+.banner-text-1{
+    font-size: 24px;
+    font-weight: 800;
+    padding: 6px 12px;
+    padding-top: 140px;
+}
+.banner-text-2{
+    padding:55px 12px;
+    font-size: 16px;
+}
 .company-1 {
     text-align: center;
     font-size: 24px;
@@ -53,6 +62,7 @@
     padding-top: 100px;
     text-align: center;
     cursor: pointer;
+    position: relative;
 }
 
 @media (min-width: 768px) {
@@ -180,32 +190,14 @@
 
 .promoto-qr-show {
     position: absolute;
-    top: -65px;
-    left: -25px;
+    top: -172px;
+    left: -65%;
     width: 133px;
     height: 168px;
     background: url(../img/qrbg.png);
     text-align: center;
     display: none;
     z-index: 5;
-}
-
-@media (max-width: 766px) {
-    .promoto-qr-show {
-        top: -151px;
-    }
-}
-
-.qr-show-wechat {
-    left: 113px;
-}
-
-.qr-show-weibo {
-    left: 235px;
-}
-
-.qr-show-seedo {
-    left: 0px;
 }
 
 .fix_nav {
@@ -418,7 +410,7 @@
 
 .parHd li:after{ content: ''; background: url(../img/unselected.png) no-repeat; width: 30px; height: 30px; position: absolute;  z-index: 20;top: 60px; left: 50%; margin-left: -12px;}
 
-.parBd{ text-align: center; margin-top: 30px;}
+.parBd{ text-align: center; margin-top: 30px;height:350px}
 
 /*.product-div-ad-title{!important;}*/
 .parBd p{ line-height: 180%; font-size: 16px; width: 80%; margin: 30px auto;}
@@ -460,8 +452,8 @@
         max-width: 64px;
     }
     .join-pic-img{
-        margin-top: -88px!important;
-        margin-left: -4px;
+        margin-top: -128px!important;
+        margin-left: -38px;
     }
 }
 .join-icon{width:231px!important;height: 216px!important;}
@@ -494,18 +486,20 @@
 .join-label{
     text-align: center;
     line-height: 34px;
-    background: #d1d1d1;
 }
 .join-input-div{
     padding-left: 0;
 }
 .join-label{
     text-align: center;
-    background: #e0e0e0;
+    background: #f8f8f8;
     height: 34px;
+    border:1px solid #d8d8d8;
+    margin-right: -1px;
 }
 .join-input{
     height: 34px;
+    border: 1px solid #d8d8d8;
 }
 .form-group{
     height: 34px;
@@ -530,4 +524,67 @@
 .seedo-code-p-text{
     font-size: 16px;
     color: #666;
+}
+.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-next-next
+{
+    transform: scale(.66);
+}
+.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-prev-prev
+{
+    transform: scale(.66);
+}
+.swiper-pagination-bullet {
+    width: 24px;
+    height: 24px;
+}
+.swiper-pagination-bullet-active-main{
+    width: 26px;
+}
+.promoto-p{
+    height: 32px;
+    overflow: hidden;
+}
+.qr-show-wechat{
+    left:-35px;
+}
+.swiper-div-1{
+    background: url(../img/banner-1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover; 
+}
+.swiper-div-2{
+    background: url(../img/banner-2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover; 
+}
+.banner-2-text-2{
+    padding: 0 12px;
+    font-size: 16px;
+}
+.banner-text-2-b{
+    font-size: 18px;
+    font-weight: 700;
+    padding: 18px 12px;
+    padding: 18px 12px;
+}
+.swiper-div-3{
+    background: url(../img/banner-3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover; 
+}
+.customer{
+    display: inline-block;
+    margin-top: 1px;
+    width: 21px;
+    height: 21px;
+    line-height: 11px;
+    vertical-align: text-top;
+    background-image: url(../img/customer.png);
+    background-repeat: no-repeat;
+    margin-right: 0.3em;
+}
+.join-line{
+    display: inline-block;  
+    width: 150px;  
+    border-top: 1px solid #ccc ;  
 }

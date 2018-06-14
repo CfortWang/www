@@ -7,7 +7,7 @@
 
 @section('content')
 <div>
-        <img src="./img/banner-2.png" class="product-img">
+        <img src="./img/banner-2.jpg" class="product-img">
     </div>
     <div class="product-div">
         <div class="row">
@@ -17,9 +17,9 @@
                 </div>
                 <div class="col-sm-6" style="text-align: left">
                     <p class="seedo-code-p">喜豆码</p>
-                    <p class="seedo-code-p-text">喜豆码将附着在零售类产品上,用户通过扫描,可免费参与平台提供的竞猜活动,有机会获得丰厚奖品。</p>
-                    <p class="seedo-code-p-text">喜豆码可在所有零售类产品上使用,目前以酒类产品优先,在酒类产品的流通使用中,能提高大概3-10%左右的销量。</p>
-                    <p class="seedo-code-p-text">喜豆码让商家和用户之间产生连接点,并持续维持。</p>
+                    <p class="seedo-code-p-text">喜豆码是由喜豆平台推出的二维码，在不同的商业零售活动中，</p>
+                    <p class="seedo-code-p-text">以不同主题的”豆子”形象出现，满足不同的商业活动场景及品牌传播需求</p>
+                    <p class="seedo-code-p-text">用户通过扫描喜豆码，获得商家提供的即时优惠，免费参与平台提供的竞猜活动， 赢得丰厚奖品。</p>
                 </div>
             </div>
         </div>
@@ -34,7 +34,7 @@
                             <img src="./img/gongpin.png" class="product-max-img"/>
                         </div>
                         <div class="difference-label">公正性</div>
-                        <div class="different-text">借鉴双色球的算法， 并和双色球的开奖数字保持一致， 在最大程度上保证平台中奖的公正性。</div>
+                        <div class="different-text">借鉴双色球的算法， 并和双色球的开奖数字保持一致， 保证平台中奖的公正性。</div>
                     </div>
                     <div class="col-sm-4 difference-sm-4">
                         <div class="" style="text-align: center;">
@@ -83,12 +83,13 @@
                 <div class="col-sm-12">
                     <div class="col-sm-6" style="text-align: left">
                         <p class="seedo-code-p">奖品规划</p>
-                        <p class="seedo-code-p-text">基于不同传播主题、合作品牌</p>
-                        <p class="seedo-code-p-text">不断更新奖品及活动形式， 让用户对平台</p>
-                        <p class="seedo-code-p-text">产生持续性关注与依赖。</p>
+                        <p class="seedo-code-p-text">懂你最想要的那一个，话题产品选择 + 自身品牌产品定制 基于传播主题、合作品牌、时下热点</p>
+                        <p class="seedo-code-p-text">不断更新奖品及活动形式，且在奖品的选择上</p>
+                        <p class="seedo-code-p-text">充分考虑话题性，让每一次奖品的输出都能成为一次传播</p>
+                        <p class="seedo-code-p-text">让每一个让用户对平台产生持续性关注于依赖。</p>
                     </div>
                     <div class="col-sm-6" >
-                        <img src="./img/xidouma.png" class="product-max-img"/>
+                        <img src="./img/prizes.png" class="product-max-img"/>
                     </div>
                 </div>
             </div>
@@ -127,9 +128,9 @@
         <p class="seedo-code-p" style="padding-top:0px">VISION</p>
         <img src="./img/vision.png" class="product-max-img">
         <p class="vision-title">带动线下实体经济</p>
-        <p class="seedo-code-p-text">将传播、娱乐、奖励机制相结合，打造互动竞猜传播平台， 用互联网产品刺激线下消费，助力实体经济增长。</p>
+        <p class="seedo-code-p-text">带动线下实体经济将传播、娱乐、奖励机制相结合，打造互动竞猜传播平台， 用互联网产品刺激线下消费，实现真实销售增长。</p>
         <p class="vision-title">资本市场进入</p>
-        <p class="seedo-code-p-text">与资本深层合作，主导小额高效投资，为商业伙伴带来创造更大价值。</p>
+        <p class="seedo-code-p-text">与资本深层合作，为销售合伙人带来稳定投资回报。</p>
         <p class="vision-title">海购电商资源对接</p>
         <p class="seedo-code-p-text">后期将接入海购电商资源， 融合直播、视频、货源追溯等功能点，提供优越体验的海购平台。</p>
     </div>

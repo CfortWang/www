@@ -9,13 +9,13 @@
 <div class="swiper-container">
         <div class="swiper-wrapper">
             <div class="swiper-slide swiper-div">
-                <img class="swiper-img-index" src="./img/banner-1.png">
+                <img class="swiper-img-index" src="./img/banner-1.jpg">
             </div>
             <div class="swiper-slide swiper-div">
-                <img class="swiper-img-index" src="./img/banner-2.png">
+                <img class="swiper-img-index" src="./img/banner-2.jpg">
             </div>
             <div class="swiper-slide swiper-div">
-                <img class="swiper-img-index" src="./img/banner-3.png">
+                <img class="swiper-img-index" src="./img/banner-3.jpg">
             </div>
         </div>
         <div class="swiper-pagination"></div>
