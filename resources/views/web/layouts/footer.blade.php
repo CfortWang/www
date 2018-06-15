@@ -10,11 +10,15 @@
                     </div>
                     <div class="contact-msg">
                         <img src="./img/phone-icon.png">
-                        <span>联系电话：0755-83830566</span>
+                        <span>联系电话：+86 755 83830566</span>
+                    </div>
+                    <div class="contact-msg">
+                        <img src="./img/email-icon.png">
+                        <span><a href="mailto:info@beanpop.cn" style="color:white">E-mail：info@beanpop.cn</a></span>
                     </div>
                     <div class="contact-msg">
                         <img src="./img/address-icon.png">
-                        <span>地址:广东省深圳市南山区粤海街道三航科技大厦7008</span>
+                        <span>地址:中国广东省深圳市南山区粤海街道三航科技大厦7008</span>
                     </div>
                 </div>
                 <div class="col-sm-6">
@@ -22,7 +26,7 @@
                         <div style="position: relative;">
                             <img src="./img/seedo.png" class="promote-img" />
                             <div class="promoto-qr-show qr-show-seedo">
-                                <img class="promoto-qr" src="./img/qrwechat.jpg">
+                                <img class="promoto-qr" src="./img/qrdownload.jpg">
                                 <p class="promoto-p">扫一扫下载APP</p>
                             </div>
                         </div>
@@ -57,7 +61,7 @@
                 </div>
             </div>
         </div>
-        <div class="copyright">Copyright©2016~2017 1shang.com 版权所有 沪ICP备14043374号-1</div>
+        <div class="copyright">Copyright©2018  版权所有 粤ICP备18065000号-1</div>
     </div>
     <script>
     $(function() {

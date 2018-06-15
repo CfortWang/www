@@ -69,7 +69,7 @@
                         <h3>加盟费</h3>
                         <div>
                             <p>金额：</p>
-                            <p style="font-size: 24px"><b>123123123.00</b></p>
+                            <p style="font-size: 24px"><b>50000.00</b></p>
                         </div>
                         
                     </div>

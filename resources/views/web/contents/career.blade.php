@@ -10,7 +10,7 @@
     <img src="./img/planbanner.jpg" class="career-img">
     <img src="./img/teampeople.jpg" class="career-max-img">
     <img src="./img/planteam.jpg" class="career-img" >
-    <img src="./img/Join.png" class="career-max-img" style="margin-top: 30px">
+    <img src="./img/Join.jpg" class="career-max-img" style="margin-top: 30px">
 </div>  
 <div id="right-nav">
     <div class="w">

@@ -17,4 +17,7 @@ Route::group(['namespace' => 'Web'], function() {
     Route::get('introduction', 'IntroductionController@index')->name("www_introduction");
     Route::get('career', 'CareerController@index')->name("www_career");
     Route::get('join', 'JoinController@index')->name("www_join");
+    Route::get('UnionPay','UnionPayController@UnionPay');
+    //页面跳转同步通知页面路径
+    Route::any('UnionPayReturn','UnionPayController@UnionPayReturn');
 });

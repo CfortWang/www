@@ -12,6 +12,9 @@
                 <div class="row">
                     <div class="col-sm-12">
                         <div class="introduction-title">公司介绍</div>
+                        <div style="margin-top: 30px;">
+                             <img src="./img/SEEDO-LOGO.png" class="introduction-img">
+                        </div>
                         <div>
                              <img src="./img/introduce.jpg" class="introduction-img">
                         </div>

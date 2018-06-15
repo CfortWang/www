@@ -88,7 +88,7 @@
                         <p class="seedo-code-p-text">充分考虑话题性，让每一次奖品的输出都能成为一次传播</p>
                         <p class="seedo-code-p-text">让每一个让用户对平台产生持续性关注于依赖。</p>
                     </div>
-                    <div class="col-sm-6" >
+                    <div class="col-sm-6" style="    padding: 44px 0;">
                         <img src="./img/prizes.png" class="product-max-img"/>
                     </div>
                 </div>
@@ -96,7 +96,7 @@
         </div>
     </div>
     <div class="product-div product-div-sha" style="padding-bottom: 50px">
-        <p class="seedo-code-p">使用流程</p>
+        <p class="seedo-code-p">喜豆应用使用流程</p>
         <img src="./img/process.png" class="product-max-img">
     </div>
     <div class="product-div product-div-ad" style="">
@@ -127,12 +127,24 @@
         <p class="seedo-code-p" style="padding-bottom:15px">产品愿景</p>
         <p class="seedo-code-p" style="padding-top:0px">VISION</p>
         <img src="./img/vision.png" class="product-max-img">
-        <p class="vision-title">带动线下实体经济</p>
-        <p class="seedo-code-p-text">带动线下实体经济将传播、娱乐、奖励机制相结合，打造互动竞猜传播平台， 用互联网产品刺激线下消费，实现真实销售增长。</p>
-        <p class="vision-title">资本市场进入</p>
-        <p class="seedo-code-p-text">与资本深层合作，为销售合伙人带来稳定投资回报。</p>
-        <p class="vision-title">海购电商资源对接</p>
-        <p class="seedo-code-p-text">后期将接入海购电商资源， 融合直播、视频、货源追溯等功能点，提供优越体验的海购平台。</p>
+        <div class="row" style="    padding: 30px 0;">
+            <div class="col-sm-4"> 
+                <p class="vision-header">01</p>
+                <p class="vision-title">带动线下实体经济</p>
+                <p class="seedo-code-p-text">带动线下实体经济将传播、娱乐、奖励机制相结合，打造互动竞猜传播平台， 用互联网产品刺激线下消费，实现真实销售增长。</p>
+            </div>
+            <div class="col-sm-4"> 
+                <p class="vision-header">02</p>
+                <p class="vision-title">资本市场进入</p>
+                <p class="seedo-code-p-text">与资本深层合作，为销售合伙人带来稳定投资回报。</p>
+                
+            </div>
+            <div class="col-sm-4"> 
+                <p class="vision-header">03</p>
+                <p class="vision-title">海购电商资源对接</p>
+                <p class="seedo-code-p-text">后期将接入海购电商资源， 融合直播、视频、货源追溯等功能点，提供优越体验的海购平台。</p>
+            </div>
+        </div>
     </div>
     <div id="right-nav">
         <div class="w">
