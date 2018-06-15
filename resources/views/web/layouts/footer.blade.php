@@ -1,9 +1,9 @@
     <div class="footer">
         <div  class="footer-contect">
             <div class="row">
-                <div class="col-sm-2">
+                <div class="col-sm-1">
                 </div>
-                <div class="col-sm-4 contact">
+                <div class="col-sm-5 contact">
                     <div class="contact-info">
                         <span>联系方式:</span>
                         <span style="color:gray;">———————————————————</span>
@@ -61,7 +61,7 @@
                 </div>
             </div>
         </div>
-        <div class="copyright">Copyright©2018  版权所有 粤ICP备18065000号-1</div>
+        <div class="copyright">Copyright©2018 深圳喜豆文化发展有限公司 版权所有 粤ICP备18065000号-1</div>
     </div>
     <script>
     $(function() {
