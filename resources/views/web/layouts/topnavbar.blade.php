@@ -7,8 +7,12 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
+                <div>
                     <img src="./img/xidou-icon.png">
-                    <span class="nav-span">互动竞猜营销平台</span>
+                    <div style="display: inline-block;vertical-align: bottom;line-height: 36px;">
+                        <span class="nav-span">互动竞猜营销平台</span>
+                    </div>
+                </div>
         </div>
         <div class="collapse navbar-collapse" id="example-navbar-collapse">
             <ul class="nav navbar-nav nav-right">

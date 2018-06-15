@@ -82,7 +82,7 @@
            <div class="row">
                 <div class="col-sm-12">
                     <div class="col-sm-6" style="text-align: left">
-                        <p class="seedo-code-p">奖品规划</p>
+                        <p class="seedo-code-p" style="padding-top:40px">奖品规划</p>
                         <p class="seedo-code-p-text">懂你最想要的那一个，话题产品选择 + 自身品牌产品定制 基于传播主题、合作品牌、时下热点</p>
                         <p class="seedo-code-p-text">不断更新奖品及活动形式，且在奖品的选择上</p>
                         <p class="seedo-code-p-text">充分考虑话题性，让每一次奖品的输出都能成为一次传播</p>
