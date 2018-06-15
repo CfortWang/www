@@ -17,9 +17,9 @@
                 </div>
                 <div class="col-sm-6" style="text-align: left">
                     <p class="seedo-code-p">喜豆码</p>
-                    <p class="seedo-code-p-text">喜豆码是由喜豆平台推出的二维码，在不同的商业零售活动中，</p>
-                    <p class="seedo-code-p-text">以不同主题的”豆子”形象出现，满足不同的商业活动场景及品牌传播需求</p>
-                    <p class="seedo-code-p-text">用户通过扫描喜豆码，获得商家提供的即时优惠，免费参与平台提供的竞猜活动， 赢得丰厚奖品。</p>
+                    <span class="seedo-code-p-text" style="line-height:32px">喜豆码是由喜豆平台推出的二维码，在不同的商业零售活动中，</span></br>
+                    <span class="seedo-code-p-text" style="line-height:32px">以不同主题的”豆子”形象出现，满足不同的商业活动场景及品牌传播需求</span></br>
+                    <span class="seedo-code-p-text" style="line-height:32px">用户通过扫描喜豆码，获得商家提供的即时优惠，免费参与平台提供的竞猜活动， 赢得丰厚奖品。</span></br>
                 </div>
             </div>
         </div>
