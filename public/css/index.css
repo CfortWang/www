@@ -593,3 +593,8 @@
     vertical-align: middle;
     margin-top: -27px;
 }
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover{
+    background-color: #111;
+    border-radius: 6px;
+    color:#ffcb00;
+}
