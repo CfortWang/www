@@ -17,8 +17,8 @@ class UnionPayController extends Controller
     public function UnionPay(){
         $gateway = Omnipay::create('UnionPay_Express');
         $gateway->setMerId('700000000000001');
-        $gateway->setCertDir(storage_path('app\unionpay\700000000000001_acp.pfx')); // .pfx file
-        $gateway->setCertPath(storage_path('app\unionpay\700000000000001_acp.pfx')); // .pfx file
+        $gateway->setCertDir(storage_path('app/unionpay/700000000000001_acp.pfx')); // .pfx file
+        $gateway->setCertPath(storage_path('app/unionpay/700000000000001_acp.pfx')); // .pfx file
         $gateway->setCertPassword('000000');
         $gateway->setReturnUrl('http://www.test/UnionPayReturn');
         $gateway->setNotifyUrl('http://www.test/notify');
@@ -55,8 +55,8 @@ class UnionPayController extends Controller
     public function undo(){
         $gateway = Omnipay::create('UnionPay_Express');
         $gateway->setMerId('700000000000001');
-        $gateway->setCertDir('C:/laragon/www/wwwapp\unionpay\700000000000001_acp.pfx'); // .pfx file
-        $gateway->setCertPath('C:/laragon/www/wwwapp\unionpay\700000000000001_acp.pfx'); // .pfx file
+        $gateway->setCertDir('C:/laragon/www/wwwapp/unionpay/700000000000001_acp.pfx'); // .pfx file
+        $gateway->setCertPath('C:/laragon/www/wwwapp/unionpay/700000000000001_acp.pfx'); // .pfx file
         $gateway->setCertPassword('000000');
         $gateway->setReturnUrl('http://www.test/UnionPayReturn');
         $gateway->setNotifyUrl('http://www.test/notify');
