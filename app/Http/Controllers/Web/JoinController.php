@@ -11,7 +11,7 @@ class JoinController extends Controller
 {
   public function __construct()
   {
-    $this->title = 'Main';
+    $this->title = '加入喜豆大军';
   }
 
   public function index()

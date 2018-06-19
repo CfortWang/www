@@ -11,7 +11,7 @@ class ProductController extends Controller
 {
   public function __construct()
   {
-    $this->title = 'Main';
+    $this->title = '产品介绍';
   }
 
   public function index()

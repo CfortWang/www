@@ -3,10 +3,12 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bean Pop</title>
+    <title>Bean Pop - {{$title}}</title>
     <link rel="icon" href="/img/seedo.ico" type="image/x-icon">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name=”keywords” content="" />
+    <meta name=”description” content="" />
     <link rel="stylesheet" type="text/css" href="./css/swiper.min.css" />
     <script src="./js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
     <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">

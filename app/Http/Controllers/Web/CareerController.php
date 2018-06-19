@@ -11,7 +11,7 @@ class CareerController extends Controller
 {
   public function __construct()
   {
-    $this->title = 'Main';
+    $this->title = '合伙人计划';
   }
 
   public function index()

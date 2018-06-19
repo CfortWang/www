@@ -11,7 +11,7 @@ class IntroductionController extends Controller
 {
   public function __construct()
   {
-    $this->title = 'Main';
+    $this->title = '公司介绍';
   }
 
   public function index()

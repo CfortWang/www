@@ -11,7 +11,7 @@ class MainController extends Controller
 {
   public function __construct()
   {
-    $this->title = 'Main';
+    $this->title = '首页';
   }
 
   public function index()
