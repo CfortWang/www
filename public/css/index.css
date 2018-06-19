@@ -622,23 +622,27 @@
     font-size: 32px;
     font-weight: 700;
 }
-.paySuccess {
+.pay-success {
     width: 1280px;
     margin: 240px auto;
     text-align: center;
 }
-.paySuccess-fee{
-    font-size: 24px;
+.pay-success-fee{
+    font-size: 28px;
     font-weight: 700;
     padding: 5px;
 }
-.paySuccess-title{
-    font-size: 32px;
+.pay-success-title{
+    font-size: 30px;
     font-weight: 700;
     padding: 5px;
     
 }
-.paySuccess-home{
-    font-size: 18px;
+.pay-success-home{
+    font-size: 16px;
     padding: 5px;
+}
+.pay-success-title-span{
+    line-height: 34px;
+    padding-left: 5px;
 }

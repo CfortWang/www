@@ -132,7 +132,7 @@
         </div>
     </div>
     <div class="join-contain" style="text-align:center;margin-bottom:50px;margin-top:30px">
-        <button class="btn btn-warning" style="padding: 6px 25px;border-radius: 13px;">提交申请</button>
+        <a class="btn btn-warning" href="/UnionPay" style="padding: 6px 25px;border-radius: 13px;">提交申请</a>
     </div>
 @endsection
 

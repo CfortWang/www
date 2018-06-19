@@ -16,7 +16,7 @@ class UnionPayController extends Controller
    
     public function UnionPay(){
         $gateway = Omnipay::create('UnionPay_Express');
-        $gateway->setMerId('777290058160633');
+        $gateway->setMerId('700000000000001');
         $gateway->setCertDir('C:/laragon/www/www/storage/app/unionpay/700000000000001_acp.pfx'); // .pfx file
         $gateway->setCertPath('C:/laragon/www/www/storage/app/unionpay/700000000000001_acp.pfx'); // .pfx file
         $gateway->setCertPassword('000000');
@@ -27,7 +27,7 @@ class UnionPayController extends Controller
             'orderId'   => date('YmdHis'), //Your order ID
             'txnTime'   => date('YmdHis'), //Should be format 'YmdHis'
             'orderDesc' => '喜豆加盟费用', //Order Title
-            'txnAmt'    => '1000000', //Order Total Fee
+            'txnAmt'    => '10', //Order Total Fee
         ];
 
         //For PC/Wap
@@ -54,7 +54,7 @@ class UnionPayController extends Controller
     
     public function undo(){
         $gateway = Omnipay::create('UnionPay_Express');
-        $gateway->setMerId('777290058160633');
+        $gateway->setMerId('700000000000001');
         $gateway->setCertDir('C:/laragon/www/www/storage/app/unionpay/700000000000001_acp.pfx'); // .pfx file
         $gateway->setCertPath('C:/laragon/www/www/storage/app/unionpay/700000000000001_acp.pfx'); // .pfx file
         $gateway->setCertPassword('000000');
@@ -63,7 +63,7 @@ class UnionPayController extends Controller
         $response = $gateway->consumeUndo([
             'orderId' => '20180619075213', //Your site trade no, not union tn.
             'txnTime' => date('YmdHis'), //Regenerate a new time
-            'txnAmt'  => '1000000', //Order total fee
+            'txnAmt'  => '10', //Order total fee
             'queryId' => '341806190752130667028', //Order total fee
         ])->send();
         // dd($response);

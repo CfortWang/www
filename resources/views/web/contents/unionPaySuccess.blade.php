@@ -6,12 +6,12 @@
 @endsection
 
 @section('content')
-<div class="paySuccess unionPaySuccess">
+<div class="pay-success union-pay-success">
     <div class="row">
         <div class="col-sm-12">
-            <div class="paySuccess-title"><img src="./img/pay-success.jpg">支付成功</div>
-            <div class="paySuccess-fee">加盟费{{$total}}</div>
-            <div class="paySuccess-home"><a href="/">返回首页</a></div>
+            <div class="pay-success-title"><img src="./img/pay-success.jpg"><span class="pay-success-title-span">支付成功</span></div>
+            <div class="pay-success-fee">加盟费{{$total}}</div>
+            <div class="pay-success-home"><a href="/">返回首页</a></div>
             
         </div>
     </div>
