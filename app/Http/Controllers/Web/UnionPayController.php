@@ -15,7 +15,7 @@ class UnionPayController extends Controller
     }
    
     public function UnionPay(){
-        $gateway = Omnipay::create('UnionPay_Express');
+        $gateway = Omnipay::create('Union_LegacyMobile');
         $gateway->setMerId('700000000000001');
         $gateway->setCertDir('C:/laragon/www/www/storage/app/unionpay/700000000000001_acp.pfx'); // .pfx file
         $gateway->setCertPath('C:/laragon/www/www/storage/app/unionpay/700000000000001_acp.pfx'); // .pfx file
