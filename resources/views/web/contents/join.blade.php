@@ -60,24 +60,7 @@
             </div>
         </div>
     </div>
-    <div class="join-contain">
-        <div class="join-input-2">
-            <div class="row">
-                <div class="col-sm-12">
-                    <div class="col-lg-1"></div>
-                    <div class="col-lg-10 form-container">
-                        <h3>加盟费</h3>
-                        <div>
-                            <p>金额：</p>
-                            <p style="font-size: 24px"><b>50000.00</b></p>
-                        </div>
-                        
-                    </div>
-                    <div class="col-lg-1"></div>
-                </div>
-            </div>
-        </div>
-    </div>
+    
     <div class="join-contain">
         <div class="join-input-2">
             <div class="row">
