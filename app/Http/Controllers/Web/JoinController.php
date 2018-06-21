@@ -20,4 +20,17 @@ class JoinController extends Controller
         'title' => $this->title,
     ]);
   }
+  public function term()
+  {
+    return view('web.contents.joinTerm', [
+        'title' => $this->title,
+    ]);
+  }
+
+  public function payment()
+  {
+    return view('web.contents.joinPayment', [
+        'title' => $this->title,
+    ]);
+  }
 }

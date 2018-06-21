@@ -27,7 +27,8 @@
     },
     "autoload": {
         "classmap": [
-            "database"
+            "database",
+            "app/ChinaPay/SecssUtil.class.php"
         ],
         "psr-4": {
             "App\\": "app/"

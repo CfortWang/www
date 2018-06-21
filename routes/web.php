@@ -17,9 +17,13 @@ Route::group(['namespace' => 'Web'], function() {
     Route::get('introduction', 'IntroductionController@index')->name("www_introduction");
     Route::get('career', 'CareerController@index')->name("www_career");
     Route::get('join', 'JoinController@index')->name("www_join");
+    Route::get('joinTerm', 'JoinController@term')->name("www_join_term");
+    Route::get('joinPayment', 'JoinController@payment')->name("www_join_payment");
+    
     Route::get('UnionPay','UnionPayController@UnionPay');
     //页面跳转同步通知页面路径
     Route::post('UnionPayReturn','UnionPayController@UnionPayReturn');
+    Route::get('unionPayFailed','UnionPayController@unionPayFailed');
     Route::get('UnionUndo','UnionPayController@undo');
     
 });

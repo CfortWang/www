@@ -14,4 +14,6 @@ use Illuminate\Http\Request;
 */
 Route::group(['namespace' => 'Api'], function() {
     Route::get('location', 'LocationController@list');
+    Route::post('join', 'JoinController@create');
+    
 }); 
