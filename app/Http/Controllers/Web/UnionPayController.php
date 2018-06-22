@@ -6,8 +6,11 @@ use App\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+
+use App\Models\SalesPartnerSignUp;
+
 use SecssUtil;
-use GuzzleHttp\Client;
+
 class UnionPayController extends Controller
 {
     public function __construct()
@@ -15,21 +18,25 @@ class UnionPayController extends Controller
         $this->title = '网银在线支付';
     }
    
-    public function UnionPay(){
+    public function UnionPay(Request $request){
+        $seq = $request->session()->get('sale_id');
+        $data = SalesPartnerSignUp::where('seq', $seq)->where('payment_status','unpaid')->first();
+        $orderNo = $data->payment_code;
         $paramArray=array(
             "Version"=> '20140728',
             "MerId"=> '731111806120002',
-            "MerOrderNo"=> '0000000414189247',
-            "TranDate"=> '20180621',
-            "TranTime"=> '150647',
-            "OrderAmt"=> '111',
+            "MerOrderNo"=> $orderNo,
+            "TranDate"=> date('Ymd'),
+            "TranTime"=> date('Hms'),
+            "OrderAmt"=> $data->payment_amount,
             "TranType"=> '0001',
             "BusiType"=> '0001',
             "CurryNo"=> 'CNY',
-            "MerPageUrl"=> 'http://chinapay.test/chinapay_demo/pgReturn.php',
-            "MerBgUrl"=> 'http://chinapay.test/chinapay_demo/bgReturn.php',
+            "MerPageUrl"=> 'http://'.$_SERVER['HTTP_HOST'].'/UnionPayReturn',
+            "MerBgUrl"=> 'http://'.$_SERVER['HTTP_HOST'].'/UnionPayNotity',
         );
         $secssUtil = new SecssUtil();
+        new SecssUtil();
         $securityPropFile = storage_path('app\unionpay\security_test.properties');
         $secssUtil->init($securityPropFile);
         $secssUtil->sign($paramArray);
@@ -40,22 +47,51 @@ class UnionPayController extends Controller
         $signature=$secssUtil->getSign();
         return view('web.contents.unionpay', [
             'title' => $this->title,
-            'signature' => $signature
+            'signature' => $signature,
+            'MerOrderNo' => $paramArray['MerOrderNo'],
+            'TranDate' => $paramArray['TranDate'],
+            'TranTime' => $paramArray['TranTime'],
+            'OrderAmt' => $paramArray['OrderAmt'],
+            'MerPageUrl' => $paramArray['MerPageUrl'],
+            'MerBgUrl' => $paramArray['MerBgUrl'],
         ]);
-        dd($response);
     }
 
     // 判断交易是否成功
-    public function UnionPayReturn(){
-        if ($_POST['respCode'] == "00") {
-            return view('web.contents.unionPaySuccess', [
-                'title' => '支付成功',
-                'total' => $_POST['txnAmt']/100
-        ]);
+    public function UnionPayReturn(Request $request){
+        $code = $request->input('TranType');
+        if ($code == "0001") {
+            $secssUtil = new SecssUtil();
+            $securityPropFile = storage_path('app\unionpay\security_test.properties');
+            $secssUtil->init($securityPropFile);
+            if ($secssUtil->verify($request->input())) {
+                $data = SalesPartnerSignUp::where('payment_code', $request->input('MerOrderNo'))->where('payment_status','unpaid')->first();
+                if($data){
+                    $data->payment_status = 'paid';
+                    $data->save();
+                    return view('web.contents.unionPaySuccess', [
+                        'title' => '支付成功',
+                        'total' => $request->input('OrderAmt'),
+                        'name' => $data->name,
+                    ]);
+
+                }
+                else{
+                    return view('web.contents.unionPayFailed', [
+                        'title' => '请联系客服',
+                        'total' => $request->input('OrderAmt'),
+                    ]);
+                }
+            } else {
+                return view('web.contents.unionPayFailed', [
+                    'title' => '请联系客服',
+                    'total' => $request->input('OrderAmt'),
+                ]);
+            }
         }else{
             return view('web.contents.unionPayFailed', [
                 'title' => '支付失败',
-                'total' => $_POST['txnAmt']/100
+                'total' => $request->input('OrderAmt'),
         ]);
         }
     }

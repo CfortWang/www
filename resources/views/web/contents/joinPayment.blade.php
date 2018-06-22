@@ -11,8 +11,9 @@
     <p class="term-title">选择支付方式</p>
     <div class="joinPayment">
         <div class="joinPayment-title">
-            <div class="col-sm-6"><span>应支付金额：</span>{{Session::get('payment_amount')/100}}<span></span></div>
-            <div class="col-sm-6"><span>用户名：</span>{{Session::get('name')}}<span></span></div>
+            <div style="padding-left:40px"><span>应支付金额：</span><span class="payment_amount">{{Session::get('payment_amount')/100}}</span>元
+             <span style="padding-left:40px">用户名：</span><span>{{Session::get('name')}}</span>
+            </div>
         </div>
         <div class="joinPayment-content">
             <ul class="nav nav-tabs" style="border-bottom:none">
@@ -21,10 +22,11 @@
             </ul>
             <div class="pay-contain online-contain">
                 <div>
-                    <a >支付宝支付</a>
+
+                    <a ><img src="./img/address-icon.png">支付宝支付</a>
                 </div>
                 <div>
-                    <a>银联支付</a>
+                    <a href="/UnionPay"><img src="./img/union.png">银联支付</a>
                 </div>
             </div>
             <div class="pay-contain tran-contain" style="display:none">

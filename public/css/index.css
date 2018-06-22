@@ -638,8 +638,8 @@
     font-weight: 700;
 }
 .pay-success {
-    width: 1280px;
-    margin: 240px auto;
+    min-width: 1280px;
+    margin: 120px auto;
     text-align: center;
 }
 .pay-success-fee{
@@ -735,4 +735,23 @@
 }
 .joinPayment-li a{
     color: #555;
+}
+.pay-jump-container{
+    text-align: center;
+}
+.pay-jump-container p{
+    padding: 240px 20px;
+    font-size: 24px;
+    font-weight: 700;
+}
+.pay-success-name{
+    color: #666;
+}
+.form-control option{
+    min-height: 12px
+}
+.payment_amount{
+    font-size: 28px;
+    color: #0084ff;
+    font-weight: 700;
 }

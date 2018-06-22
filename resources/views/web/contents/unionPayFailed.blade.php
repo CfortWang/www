@@ -9,8 +9,8 @@
 <div class="pay-success unionPay-success">
     <div class="row">
         <div class="col-sm-12">
-            <div class="pay-success-title"><img src="./img/pay-failed.jpg"><span class="pay-success-title-span">支付失败</span></div>
-            <div class="pay-success-fee">加盟费{{$total}}</div>
+            <div class="pay-success-title"><img src="./img/pay-failed.jpg"><span class="pay-success-title-span">支付失败,如果您确定已支付，请联系客服。</span></div>
+            <div class="pay-success-fee">加盟费{{$total/100}}</div>
             <div class="pay-success-home"><a href="/">返回首页</a></div>
             
         </div>

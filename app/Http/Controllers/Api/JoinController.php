@@ -81,7 +81,7 @@ class JoinController extends Controller
             'area' => isset($post['area'])?$post['area']:null,
             'recommender' => $recommender,
         ]);
-        $request->session()->put('sale_id', $sale_id);
+        $request->session()->put('sale_id', $sale_id->seq);
         $request->session()->put('payment_amount', $amount->min_premium);
         $request->session()->put('name', $post['name']);
         return $this->responseOK('create buyer success', $sale_id);

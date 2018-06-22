@@ -7,6 +7,16 @@
 @endsection
 
 @section('content')
+<style>
+@media (max-width: 768px) {
+    .form-group {
+        margin-bottom: 50px;
+    }
+    .location-group{
+        margin-bottom: 140px;
+    }
+}
+</style>
     <div class="join-div-1">
         喜豆销售合伙人申请
     </div>
@@ -63,7 +73,7 @@
                                 </select>
                             </div>
                         </div>
-                        <div class="form-group">
+                        <div class="form-group location-group">
                             <label class="col-lg-3 control-label" >地域：</label>
                             <div class="col-lg-9">
                                 <select class="form-control" id="province" name="province">
@@ -243,6 +253,7 @@
                     }
                     city.html(html);
                     $('#city').val('');
+                    setArea('');
                 },
                 error: function(e) {
                     console.log(e);

@@ -9,9 +9,12 @@
 <div class="pay-success union-pay-success">
     <div class="row">
         <div class="col-sm-12">
-            <div class="pay-success-title"><img src="./img/pay-success.jpg"><span class="pay-success-title-span">支付成功</span></div>
-            <div class="pay-success-fee">加盟费{{$total}}</div>
-            <div class="pay-success-home"><a href="/">返回首页</a></div>
+            <div class="pay-success-title"><img src="./img/seedo.png"><span class="pay-success-title-span">欢迎成为销售合伙人</span></div>
+            <div class="pay-success-fee">用户名：<span class="pay-success-name">{{$name}}</span>  密码：<span class="pay-success-name">提交申请时设置的密码</span></div>
+            <div class="pay-success-code">
+                <img src="./img/qrdownload.jpg">
+                <p>下载APP</p>
+            </div>
             
         </div>
     </div>
