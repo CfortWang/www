@@ -55,8 +55,13 @@ class JoinController extends Controller
         if($exits){
             return $this->responseConflict('用户名已存在');
         }
-        $recommender = '';
-        if(isset($post['recommender'])){
+        $exits = SalesPartnerSignUp::where('name', $id)->first();
+
+        if($exits){
+            return $this->responseConflict('用户名已存在');
+        }
+        $recommender = null;
+        if(isset($post['recommender'])&&$post['recommender']){
             $re_exits = PartnerAccount::where('id', $post['recommender'])->first();
             if($re_exits){
                 $recommender = $re_exits->seq;
@@ -74,7 +79,8 @@ class JoinController extends Controller
             'gender' => $post['gender'],
             'country' => 1,
             'payment_status' => 'unpaid',
-            'payment_amount' => $amount->min_premium,
+            // 'payment_amount' => $amount->min_premium,
+            'payment_amount' => 10,
             'payment_code' => md5($post['type'].'_1'.'_'.$post['province'].'_'.$post['phone_num'].'_'.$post['email'].microtime()),
             'province' => $post['province'],
             'city' => isset($post['city'])?$post['city']:null,
@@ -82,7 +88,8 @@ class JoinController extends Controller
             'recommender' => $recommender,
         ]);
         $request->session()->put('sale_id', $sale_id->seq);
-        $request->session()->put('payment_amount', $amount->min_premium);
+        // $request->session()->put('payment_amount', $amount->min_premium);
+        $request->session()->put('payment_amount',10);
         $request->session()->put('name', $post['name']);
         return $this->responseOK('create buyer success', $sale_id);
     }

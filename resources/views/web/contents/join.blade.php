@@ -361,6 +361,7 @@
         $('.btn-submit').click(function(){
             var data = $('form').serialize();
             if($('#join-form').data('bootstrapValidator').isValid()){  
+                $('.btn-submit').attr('disabled',true);
                 $.ajax({
                     url: '/api/join',
                     dataType: 'json',
@@ -370,6 +371,7 @@
                         window.location.href='/joinTerm';
                     },
                     error: function(e,response) {
+                        $('.btn-submit').attr('disabled',false);
                         if(typeof(jQuery.parseJSON(e.responseText).message)=='string'){
                             $('.alert-danger').text(jQuery.parseJSON(e.responseText).message);
                             $('.alert-danger').show();
