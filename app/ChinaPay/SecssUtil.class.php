@@ -275,7 +275,15 @@ class SecssUtil
     {
         try {
             // 读取密钥文件
-            $key_file = parse_ini_file($securityPropFile);
+            $key_file = array(
+                "sign.file" => storage_path('app\unionpay\789.pfx'),
+                "sign.file.password" => "666352",
+                "sign.cert.type" => "PKCS12",
+                "sign.invalid.fields" => "Signature",
+                "verify.file" => storage_path('app\unionpay\B2C.cer'),
+                "signature.field" => "Signature",
+                "log4j.name" => "cpLog",
+            );
             if (! $key_file) {
                 // 01.加载secss.properties配置文件出错，请检查文件路径！
                 $this->errCode = CP_LOAD_CONFIG_ERROR;
