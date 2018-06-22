@@ -19,6 +19,16 @@ class UnionPayController extends Controller
     }
    
     public function UnionPay(Request $request){
+        $key_file = array(
+            "sign.file" => storage_path('app/unionpay/789.pfx'),
+            "sign.file.password" => "666352",
+            "sign.cert.type" => "PKCS12",
+            "sign.invalid.fields" => "Signature",
+            "verify.file" => storage_path('app/unionpay/B2C.cer'),
+            "signature.field" => "Signature",
+            "log4j.name" => "cpLog",
+        );
+        dd($key_file);
         $seq = $request->session()->get('sale_id');
         $data = SalesPartnerSignUp::where('seq', $seq)->where('payment_status','unpaid')->first();
         $orderNo = $data->payment_code;
@@ -37,7 +47,7 @@ class UnionPayController extends Controller
         );
         $secssUtil = new SecssUtil();
         new SecssUtil();
-        $securityPropFile = storage_path('app\unionpay\security_test.properties');
+        $securityPropFile = storage_path('app/unionpay/security_test.properties');
         $secssUtil->init($securityPropFile);
         $secssUtil->sign($paramArray);
         if("00"!==$secssUtil->getErrCode()){
@@ -62,7 +72,7 @@ class UnionPayController extends Controller
         $code = $request->input('TranType');
         if ($code == "0001") {
             $secssUtil = new SecssUtil();
-            $securityPropFile = storage_path('app\unionpay\security_test.properties');
+            $securityPropFile = storage_path('app/unionpay/security_test.properties');
             $secssUtil->init($securityPropFile);
             if ($secssUtil->verify($request->input())) {
                 $data = SalesPartnerSignUp::where('payment_code', $request->input('MerOrderNo'))->where('payment_status','unpaid')->first();
@@ -97,21 +107,6 @@ class UnionPayController extends Controller
     }
     
     public function undo(){
-        $gateway = Omnipay::create('UnionPay_Express');
-        $gateway->setMerId('700000000000001');
-        $gateway->setCertDir('C:/laragon/www/wwwapp\unionpay\B2.pfx'); // .pfx file
-        $gateway->setCertPath('C:/laragon/www/wwwapp\unionpay\B2.pfx'); // .pfx file
-        $gateway->setCertPassword('000000');
-        $gateway->setReturnUrl('http://www.test/UnionPayReturn');
-        $gateway->setNotifyUrl('http://www.test/notify');
-        $response = $gateway->consumeUndo([
-            'orderId' => '20180619075213', //Your site trade no, not union tn.
-            'txnTime' => date('YmdHis'), //Regenerate a new time
-            'txnAmt'  => '1000000', //Order total fee
-            'queryId' => '341806190752130667028', //Order total fee
-        ])->send();
-        // dd($response);
-        dd($response->isSuccessful());
-        dd($response->getData());
+        
     }
 }

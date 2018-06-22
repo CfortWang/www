@@ -276,11 +276,11 @@ class SecssUtil
         try {
             // 读取密钥文件
             $key_file = array(
-                "sign.file" => storage_path('app\unionpay\789.pfx'),
+                "sign.file" => storage_path('app/unionpay/789.pfx'),
                 "sign.file.password" => "666352",
                 "sign.cert.type" => "PKCS12",
                 "sign.invalid.fields" => "Signature",
-                "verify.file" => storage_path('app\unionpay\B2C.cer'),
+                "verify.file" => storage_path('app/unionpay/B2C.cer'),
                 "signature.field" => "Signature",
                 "log4j.name" => "cpLog",
             );
