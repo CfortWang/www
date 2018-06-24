@@ -16,25 +16,31 @@
             </div>
         </div>
         <div class="joinPayment-content">
+            <div class="joinPayment-content-title">支付方式</div>
             <ul class="nav nav-tabs" style="border-bottom:none">
                 <li class="joinPayment-li active"><a href="javascript:;" id="online-contain">在线支付</a></li>
                 <li class="joinPayment-li"><a href="javascript:;" id="tran-contain">银行汇款</a></li>
             </ul>
             <div class="pay-contain online-contain">
-                <div>
-
-                    <a ><img src="./img/address-icon.png">支付宝支付</a>
+                <div class="pay-contain-indiv">
+                    <a >
+                        <input name="" type="radio"/>
+                    <img src="./img/address-icon.png">支付宝支付</a>
                 </div>
-                <div>
-                    <a href="/UnionPay"><img src="./img/union.png">银联支付</a>
-                </div>
+                <a href="/UnionPay">
+                    <div class="pay-contain-indiv">
+                        <input name="" type="radio"/>
+                        <img src="./img/union.png">银联支付
+                    </div>
+                </a>
             </div>
             <div class="pay-contain tran-contain" style="display:none">
-                <p>转账汇款，请先联系在线客服。</p>
+                <p class="tran-contain-title"><strong>转账汇款，请先联系在线客服。</strong></p>
 
                 <p>1.由于转账汇款时间较长，将为您带来诸多不便，请您谅解。</p>
 
                 <p>2.在完成转账或付款业务后，请您尽快与我们联系（400-XXX-XXX 或 在线客服），并提供姓名、金额、用户名。</p>
+                <p style="padding: 15px;"></p>
                 <p>单位名称：深圳喜豆文化发展有限公司</p>
 
                 <p>开户银行：招商银行股份有限公司深圳南硅谷支行</p>

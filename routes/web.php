@@ -23,6 +23,8 @@ Route::group(['namespace' => 'Web'], function() {
     Route::get('UnionPay','UnionPayController@UnionPay');
     //页面跳转同步通知页面路径
     Route::post('UnionPayReturn','UnionPayController@UnionPayReturn');
+    Route::post('UnionPayNotity','UnionPayController@UnionPayNotity');
+    
     Route::get('unionPayFailed','UnionPayController@unionPayFailed');
     Route::get('UnionUndo','UnionPayController@undo');
     
