@@ -643,12 +643,13 @@
     text-align: center;
 }
 .pay-success-fee{
-    font-size: 28px;
+    font-size: 16px;
     font-weight: 700;
     padding: 5px;
+    padding-bottom: 18px;
 }
 .pay-success-title{
-    font-size: 30px;
+    font-size: 24px;
     font-weight: 700;
     padding: 5px;
     
@@ -762,9 +763,13 @@
     padding-bottom: 15px;
 }
 .pay-contain-indiv{
-    padding: 5px;
+    padding: 5px 10px;
     display: inline-block;
     border: 1px solid #ddd;
+    line-height: 28px;
+}
+.pay-contain-indiv:active, .pay-contain-indiv:hover{
+    border-color:#0084ff; 
 }
 .pay-contain a{
     text-decoration:none;
@@ -772,4 +777,17 @@
 .tran-contain-title{
     font-size: 16px;
     
+}
+.pay-contain-span{
+    padding-left: 10px;
+    color: #555;
+}
+.pay-download{
+    padding-top: 18px;
+    font-size: 18px;
+}
+.pay-success-img{
+    border: 16px solid #f8f8f8;
+    display: inline-block;
+    border-radius: 16px;
 }

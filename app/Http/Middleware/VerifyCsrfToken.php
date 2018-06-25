@@ -12,7 +12,8 @@ class VerifyCsrfToken extends BaseVerifier
      * @var array
      */
     protected $except = [
-        //
-        'http://www.test/UnionPayReturn'
+        'http://www.beanpop.cn//UnionPayReturn',
+        'http://www.beanpop.cn//AliPayNotify',
+        'http://www.beanpop.cn//UnionNotify',
     ];
 }

@@ -20,10 +20,16 @@ Route::group(['namespace' => 'Web'], function() {
     Route::get('joinTerm', 'JoinController@term')->name("www_join_term");
     Route::get('joinPayment', 'JoinController@payment')->name("www_join_payment");
     
+    
+    //China pay
     Route::get('UnionPay','UnionPayController@UnionPay');
-    //页面跳转同步通知页面路径
     Route::post('UnionPayReturn','UnionPayController@UnionPayReturn');
     Route::post('UnionPayNotity','UnionPayController@UnionPayNotity');
+    
+    // Alipay
+    Route::get('AliPay','AliPayController@AliPay');
+    Route::post('AliPayNotify','AliPayController@AliPayNotify');
+    Route::any('AliPayReturn','AliPayController@AliPayReturn');
     
     Route::get('unionPayFailed','UnionPayController@unionPayFailed');
     Route::get('UnionUndo','UnionPayController@undo');

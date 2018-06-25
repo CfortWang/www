@@ -23,16 +23,15 @@
             </ul>
             <div class="pay-contain online-contain">
                 <div class="pay-contain-indiv">
-                    <a >
-                        <input name="" type="radio"/>
-                    <img src="./img/address-icon.png">支付宝支付</a>
+                    <a href="/AliPay">
+                        <img src="./img/alipay.png"><span class="pay-contain-span">支付宝支付</span>
+                    </a>
                 </div>
-                <a href="/UnionPay">
-                    <div class="pay-contain-indiv">
-                        <input name="" type="radio"/>
-                        <img src="./img/union.png">银联支付
-                    </div>
-                </a>
+                <div class="pay-contain-indiv" style="margin-left:10px">
+                    <a href="/UnionPay">
+                        <img src="./img/unionpay.png"><span class="pay-contain-span">银联支付</span>
+                    </a>
+                </div>
             </div>
             <div class="pay-contain tran-contain" style="display:none">
                 <p class="tran-contain-title"><strong>转账汇款，请先联系在线客服。</strong></p>

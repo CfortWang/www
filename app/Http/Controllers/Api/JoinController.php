@@ -79,6 +79,7 @@ class JoinController extends Controller
             'gender' => $post['gender'],
             'country' => 1,
             'payment_status' => 'unpaid',
+            'type' => $post['type'],
             // 'payment_amount' => $amount->min_premium,
             'payment_amount' => 10,
             'payment_code' => md5($post['type'].'_1'.'_'.$post['province'].'_'.$post['phone_num'].'_'.$post['email'].microtime()),

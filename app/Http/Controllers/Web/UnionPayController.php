@@ -2,16 +2,16 @@
 
 namespace App\Http\Controllers\Web;
 
-use App\Http\Controllers\Controller;
-
+use App\Http\Controllers\Web\PayController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
 use App\Models\SalesPartnerSignUp;
 
 use SecssUtil;
+use Omnipay\Omnipay;
 
-class UnionPayController extends Controller
+class UnionPayController extends PayController
 {
     public function __construct()
     {
@@ -28,9 +28,14 @@ class UnionPayController extends Controller
             "signature.field" => "Signature",
             "log4j.name" => "cpLog",
         );
-        dd($key_file);
         $seq = $request->session()->get('sale_id');
         $data = SalesPartnerSignUp::where('seq', $seq)->where('payment_status','unpaid')->first();
+        if(!$seq){
+            return view('web.contents.unionPayFailed', [
+                'title' => '请联系客服',
+                'total' => 0,
+            ]);
+        }
         $orderNo = $data->payment_code;
         $paramArray=array(
             "Version"=> '20140728',
@@ -74,39 +79,63 @@ class UnionPayController extends Controller
             $secssUtil = new SecssUtil();
             $securityPropFile = storage_path('app/unionpay/security_test.properties');
             $secssUtil->init($securityPropFile);
-            if ($secssUtil->verify($request->input())) {
+            if ($secssUtil->verify($request->input())&&$request->input('OrderStatus')=='0000') {
                 $data = SalesPartnerSignUp::where('payment_code', $request->input('MerOrderNo'))->where('payment_status','unpaid')->first();
                 if($data){
                     $data->payment_status = 'paid';
+                    $data->payment_type = 'card';
                     $data->save();
-                    return view('web.contents.unionPaySuccess', [
-                        'title' => '支付成功',
-                        'total' => $request->input('OrderAmt'),
-                        'name' => $data->name,
-                    ]);
-
+                    $save_sta = $this->saveSales($data->seq);
+                    if($save_sta['status']){
+                        return view('web.contents.unionPaySuccess', [
+                            'title' => '支付成功',
+                            'total' => $data->payment_amount/100,
+                            'name' => $data->name,
+                        ]);
+                    }else{
+                        return view('web.contents.unionPayFailed', [
+                            'title' => '请联系客服',
+                            'total' => $data->payment_amount/100,
+                        ]);
+                    }
                 }
                 else{
                     return view('web.contents.unionPayFailed', [
                         'title' => '请联系客服',
-                        'total' => $request->input('OrderAmt'),
+                        'total' => $request->input('OrderAmt')/100,
                     ]);
                 }
             } else {
                 return view('web.contents.unionPayFailed', [
                     'title' => '请联系客服',
-                    'total' => $request->input('OrderAmt'),
+                    'total' => $request->input('OrderAmt')/100,
                 ]);
             }
         }else{
             return view('web.contents.unionPayFailed', [
                 'title' => '支付失败',
-                'total' => $request->input('OrderAmt'),
+                'total' => $request->input('OrderAmt')/100,
         ]);
         }
     }
     
-    public function undo(){
-        
+    public function UnionPayNotity(Request $request){
+        $code = $request->input('TranType');
+        if ($code == "0001") {
+            $secssUtil = new SecssUtil();
+            $securityPropFile = storage_path('app/unionpay/security_test.properties');
+            $secssUtil->init($securityPropFile);
+            if ($secssUtil->verify($request->input())&&$request->input('OrderStatus')=='0000') {
+                $data = SalesPartnerSignUp::where('payment_code', $request->input('MerOrderNo'))->where('payment_status','unpaid')->first();
+                if($data){
+                    $data->payment_status = 'paid';
+                    $data->payment_type = 'card';
+                    $data->save();
+                    $save_sta = $this->saveSales($data->seq);
+                    $this->responseOK('ok');
+                }
+            }
+        }
+
     }
 }

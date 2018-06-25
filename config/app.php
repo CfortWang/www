@@ -183,7 +183,6 @@ return [
          * Excel Export
          */
         Maatwebsite\Excel\ExcelServiceProvider::class,
-
     ],
 
     /*
