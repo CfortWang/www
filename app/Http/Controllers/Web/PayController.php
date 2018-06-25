@@ -150,6 +150,7 @@ class PayController extends Controller
           'provider' => $provider,
           'distributor' => $distributor,
           'agency' => $agency,
+          'status' => 'registered',
       ]; 
       $sale_id = SalesPartner::create($sale_data);
       switch ($data->type) {

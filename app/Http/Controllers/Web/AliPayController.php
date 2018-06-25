@@ -67,17 +67,21 @@ class AliPayController extends PayController
                 /**
                  * Payment is successful
                  */
-                $data = SalesPartnerSignUp::where('payment_code', $request->input('out_trade_no'))->where('payment_status','unpaid')->first();
+                $data = SalesPartnerSignUp::where('payment_code', $request->input('out_trade_no'))->first();
                 if(!$data){
                     return view('web.contents.unionPayFailed', [
                         'title' => '请联系客服',
                         'total' => $request->input('total_amount'),
                     ]);
                 }
-                $data->payment_status = 'paid';
-                $data->payment_type = 'alipay';
+                if($data->payment_status=='unpaid'){
+                    $data->payment_status = 'paid';
+                    $data->payment_type = 'alipay';
+                    $data->save();
+                    $save_sta = $this->saveSales($data->seq);
+                }
+                $data->payment_result = json_encode($request->input());
                 $data->save();
-                $save_sta = $this->saveSales($data->seq);
                 die('success'); //The notify response should be 'success' only
             }else{
                 /**
@@ -104,17 +108,21 @@ class AliPayController extends PayController
         try {
             $response = $gateway_request->send();
             if($response->isPaid()){
-                $data = SalesPartnerSignUp::where('payment_code', $request->input('out_trade_no'))->where('payment_status','unpaid')->first();
+                $data = SalesPartnerSignUp::where('payment_code', $request->input('out_trade_no'))->first();
                 if(!$data){
                     return view('web.contents.unionPayFailed', [
                         'title' => '请联系客服',
                         'total' => $request->input('total_amount'),
                     ]);
                 }
-                $data->payment_status = 'paid';
-                $data->payment_type = 'alipay';
-                $data->save();
-                $save_sta = $this->saveSales($data->seq);
+                if($data->payment_status=='unpaid'){
+                    $data->payment_status = 'paid';
+                    $data->payment_type = 'alipay';
+                    $data->save();
+                    $save_sta = $this->saveSales($data->seq);
+                }else{
+                    $save_sta['status'] = true;
+                }
                 if($save_sta['status']){
                     return view('web.contents.unionPaySuccess', [
                         'title' => '支付成功',
