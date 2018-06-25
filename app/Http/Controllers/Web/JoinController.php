@@ -7,6 +7,8 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
+use App\Models\SalesPartnerSignUp;
+
 class JoinController extends Controller
 {
   public function __construct()
@@ -27,10 +29,20 @@ class JoinController extends Controller
     ]);
   }
 
-  public function payment()
+  public function payment(Request $request)
   {
-    return view('web.contents.joinPayment', [
-        'title' => $this->title,
-    ]);
+    $seq = $request->session()->get('sale_id');
+    $data = SalesPartnerSignUp::where('seq', $seq)->first();
+    if($data->payment_status=='unpaid'){
+      return view('web.contents.joinPayment', [
+          'title' => $this->title,
+      ]);
+    }else{
+      return view('web.contents.unionPaySuccess', [
+        'title' => '支付成功',
+        'total' => $data->payment_amount/100,
+        'name' => $data->name,
+      ]);
+    }
   }
 }
