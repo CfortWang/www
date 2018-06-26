@@ -407,8 +407,13 @@
     background: url(../img/beijing.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    min-height: 377px;
+    min-height: 623px;
     color: white
+}
+@media (max-width: 768px) {
+    .product-div-ad{
+        min-height: 377px;
+    }
 }
 
 .parHd  ul{ width: 100%; text-align: center; margin: 30px auto; padding-top: 25px !important;-webkit-padding-start: 0px;}
@@ -491,7 +496,7 @@
     width: 50%;  
     height: 4px;  
     position: absolute;  
-    top:-146px;  
+    top:-10px;  
 }
 .product-line:before {  
     background: white;  
