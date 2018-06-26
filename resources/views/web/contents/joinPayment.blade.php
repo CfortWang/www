@@ -32,12 +32,12 @@
                 <li class="joinPayment-li"><a href="javascript:;" id="tran-contain">银行汇款</a></li>
             </ul>
             <div class="pay-contain online-contain">
-                <div class="pay-contain-indiv">
+                <div class="pay-contain-indiv" style="margin:10px">
                     <a href="/AliPay">
                         <img src="./img/alipay.png"><span class="pay-contain-span">支付宝支付</span>
                     </a>
                 </div>
-                <div class="pay-contain-indiv" style="margin-left:10px">
+                <div class="pay-contain-indiv" style="margin:10px">
                     <a href="/UnionPay">
                         <img src="./img/unionpay.png"><span class="pay-contain-span">银联支付</span>
                     </a>
