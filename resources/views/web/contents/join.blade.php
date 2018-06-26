@@ -8,7 +8,7 @@
 
 @section('content')
 <style>
-@media (max-width: 768px) {
+@media (max-width: 1366px) {
     .form-group {
         margin-bottom: 50px;
     }
