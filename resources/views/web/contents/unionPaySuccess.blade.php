@@ -6,6 +6,16 @@
 @endsection
 
 @section('content')
+<div class="join-div-1">
+    <div class="parHd parHd-join clearfix">
+        <ul>
+            <li class="toggle parHd-join-active"><p class="step-active">信息提交</p></li>
+            <li class="toggle parHd-join-active"><p class="step-active">合同确认</p></li>
+            <li class="toggle parHd-join-active"><p class="step-active">选择支付</p></li>
+            <li class="toggle parHd-join-active"><p class="step-active">完成支付</p></li>
+        </ul>
+    </div>
+</div>
 <div class="pay-success union-pay-success">
     <div class="row">
         <div class="col-sm-12">

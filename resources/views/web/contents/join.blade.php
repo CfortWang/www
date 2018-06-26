@@ -18,7 +18,16 @@
 }
 </style>
     <div class="join-div-1">
-        喜豆销售合伙人申请
+        <!-- 喜豆销售合伙人申请 -->
+        <div class="parHd parHd-join clearfix">
+            <ul>
+                <li class="toggle"><p class="step-pending">信息提交</p></li>
+                <li class="toggle"><p class="step-pending">合同确认</p></li>
+                <li class="toggle"><p class="step-pending">选择支付</p></li>
+                <li class="toggle"><p class="step-pending">完成支付</p></li>
+
+            </ul>
+        </div>
     </div>
             <form id="join-form" class="form-horizontal">
     <div class="join-contain " >

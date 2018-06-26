@@ -447,6 +447,36 @@
 
 .parBd{ text-align: center; margin-top: 30px;height:350px}
 
+
+.parHd-join li{
+    margin: 0 -5px;
+    min-width: 150px;
+}
+
+.parHd-join-active:before{
+    background: #ffcb00!important;
+}
+
+.parHd-join-active:after{
+    background: url(../img/line-done.png) no-repeat!important;
+}
+.parHd-join li:before{
+    content: "";
+    width: 100%;
+    height: 4px;
+    position: absolute;
+    top: 43px;
+    background: #e6e6e6;
+    left: 5%;
+}
+
+.parHd-join li:after{
+    background: url(../img/line-pending.png) no-repeat;
+    left: auto;
+    top: 30px;
+}
+
+
 /*.product-div-ad-title{!important;}*/
 .parBd p{ line-height: 180%; font-size: 16px; width: 80%; margin: 30px auto;}
 .par-active:after{background: url(../img/selected.png) no-repeat!important;}
@@ -461,7 +491,7 @@
     width: 50%;  
     height: 4px;  
     position: absolute;  
-    top:-10px;  
+    top:-146px;  
 }
 .product-line:before {  
     background: white;  
@@ -479,9 +509,13 @@
         margin: 0 auto;  
     }
     .parHd li{  display: inline-block; cursor: pointer; padding-top: 30px; font-size: 16px; color: white;margin:0 24px; position: relative; }
+    .parHd-join li{margin: 0 -5px;    min-width: 70px;}
     .join-contain{
         margin: 0 auto;
         width: 80%!important;
+    }
+    .parHd-join li:after {
+        left: 38%;
     }
     .join-pic-div{
         max-width: 64px;
@@ -496,18 +530,13 @@
     width:231px;height: 216px
 }
 .join-div-1{
-    background: url(../img/join-bg.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    min-height: 270px;
     text-align:center;
-    /*vertical-align: middle;*/
-    line-height: 160px;
+    line-height: 100px;
     font-size: 24px;
-    font-weight: 700;
+    background: #f8f8f8;
 }
 .join-contain{
-    margin: 0 auto;
+    margin: 50px auto;
     width: 50%;
 }
 .join-input-1{
@@ -515,8 +544,14 @@
     border: 1px solid white;
     min-height: 450px;
     box-shadow: darkgrey 5px 5px 15px 2px ;
-    margin-top: -150px;
+    /* margin-top: -150px; */
     margin-bottom: 50px;
+}
+.step-active{
+    color: #ffcb00;
+}
+.step-pending{
+    color: #e6e6e6;
 }
 .join-label{
     text-align: center;
