@@ -6,7 +6,8 @@
                 <div class="col-sm-5 contact">
                     <div class="contact-info">
                         <span>联系方式:</span>
-                        <span style="color:gray;">———————————————————</span>
+                    </div>
+                    <div style="    border-bottom: 2px solid gray;padding: 10px 0;margin-bottom: 10px;">
                     </div>
                     <div class="contact-msg">
                         <img src="./img/phone-icon.png">
