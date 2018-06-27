@@ -15,6 +15,9 @@
     .location-group{
         margin-bottom: 140px;
     }
+    .phone-group{
+        margin-bottom:80px;
+    }
 }
 </style>
     <div class="join-div-1">
@@ -64,10 +67,19 @@
                                 <input type="email" class="form-control" name="email" id="email">
                             </div>
                         </div>
-                        <div class="form-group">
+                        <div class="form-group phone-group">
                             <label class="col-lg-3 control-label" for="phone_num">手机号：</label>
-                            <div class="col-lg-9">
+                            <div class="col-lg-7">
                                 <input type="text" class="form-control" id="phone_num" name="phone_num">
+                            </div>
+                            <div class="col-lg-2">
+                                <span class="btn btn-success get-certification">获取验证码</button>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-lg-3 control-label" for="certification">验证码：</label>
+                            <div class="col-lg-9">
+                                <input type="text" class="form-control" id="certification" name="certification">
                             </div>
                         </div>
                         <div class="form-group">
@@ -187,6 +199,18 @@
                             regexp: /^1[3|5|8]{1}[0-9]{9}$/,
                             message: '请输入正确的手机号码'
                         }
+                    }
+                },
+                certification:{
+                    validators: {
+                        notEmpty: {
+                         message: '验证码不能为空'
+                        },
+                        stringLength: {
+                            min: 6,
+                            max: 6,
+                            message: '请输入6位验证码'
+                        },
                     }
                 },
                 type: {
@@ -389,6 +413,56 @@
                 });
             } 
         })
+        $('.get-certification').click(function(){
+            $('.alert-danger').hide();
+            if(!$('#phone_num').val()||$('#phone_num').val().length!=11){
+                $('.phone-group').addClass('has-feedback');
+                $('.phone-group').addClass('has-error');
+                $('#phone_num').next().show()
+                $('#phone_num').next().next().show();
+                return false;
+            }
+            $.ajax({
+                url: '/api/join/send_sms',
+                dataType: 'json',
+                type: 'post',
+                data:{phone_num:$('#phone_num').val(),country:1,lang:'zh'} ,
+                success: function(response){
+                    var countdown=60;
+                    var obj = $('.get-certification');
+
+                    function settime(obj) {
+                        if (countdown == 0) {
+                            $(obj).attr("disabled",false);
+                            $(obj).attr("mark","1");
+                            $(obj).html("获取验证码");
+                            countdown = 60;
+                            return;
+                        } else {
+                            $(obj).attr("disabled", true);
+                            $(obj).attr("mark","0");
+                            $(obj).html("重新发送(" + countdown + ")");
+                            countdown--;
+                        }
+                        setTimeout(function() {
+                            settime(obj) 
+                            }
+                            ,1000)   
+                    }
+                    settime(obj)
+                },
+                error: function(e) {
+                    console.log(e);
+                    var msg  = '发送短信失败';
+                    if(typeof(jQuery.parseJSON(e.responseText).message)=='string'){
+                        msg = jQuery.parseJSON(e.responseText).message;
+                    }
+                    $('.alert-danger').text(msg);
+                    $('.alert-danger').show();
+                }
+            },'get');
+        })
+
 </script>
         
 @endsection
