@@ -33,5 +33,6 @@ Route::group(['namespace' => 'Web'], function() {
     
     Route::get('unionPayFailed','UnionPayController@unionPayFailed');
     Route::get('UnionUndo','UnionPayController@undo');
+    Route::get('download/spapp','DownloadController@spapp');
     
 });
