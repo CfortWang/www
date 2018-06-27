@@ -11,10 +11,10 @@
             <div class="introduction-top">
                 <div class="row">
                     <div class="col-sm-12">
-                        <div class="introduction-title">公司介绍</div>
-                        <div style="margin-top: 30px;">
+                        <div style="padding: 30px 0;border-bottom: 1px solid #eee;">
                              <img src="./img/SEEDO-LOGO.png" class="introduction-img">
                         </div>
+                        <div class="introduction-title" >公司介绍</div>
                         <div>
                              <img src="./img/introduce.jpg" class="introduction-img">
                         </div>
@@ -27,7 +27,7 @@
                              <img src="./img/brand.png" class="introduction-img">
                         </div>
                         <div>
-                            <div class="introduction-title">公司地址</div>
+                            <div class="introduction-title" style="    padding-bottom: 30px;border-bottom: 1px solid #eee;">公司地址</div>
                             <div id="map">
                                 
                             </div>

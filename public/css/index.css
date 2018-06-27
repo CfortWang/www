@@ -383,6 +383,8 @@
     font-weight: 710;
     font-size: 24px;
     margin: 30px 0;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #eee;
 }
 .career{
     text-align: center;
@@ -399,8 +401,7 @@
 #map{
     min-height:300px;
     max-width: 960px;
-    margin: 30px auto;
-
+    margin: 40px auto;
 }
 
 .product-div-ad{

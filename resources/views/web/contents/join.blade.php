@@ -94,16 +94,18 @@
                                 </select>
                             </div>
                         </div>
-                        <div class="form-group location-group">
-                            <label class="col-lg-3 control-label" >地域：</label>
-                            <div class="col-lg-9">
-                                <select class="form-control" id="province" name="province">
-                                    <option value="">选择省份</option>
-                                </select><select class="form-control" id="city" name="city">
-                                    <option value="">选择城市</option>
-                                </select><select class="form-control" id="area" name="area">
-                                    <option value="">选择地区</option>
-                                </select>
+                        <div class="row">
+                            <div class="form-group location-group">
+                                <label class="col-lg-3 control-label" >地域：</label>
+                                <div class="col-lg-9">
+                                    <select class="form-control" id="province" name="province">
+                                        <option value="">选择省份</option>
+                                    </select><select class="form-control" id="city" name="city">
+                                        <option value="">选择城市</option>
+                                    </select><select class="form-control" id="area" name="area">
+                                        <option value="">选择地区</option>
+                                    </select>
+                                </div>
                             </div>
                         </div>
                         <div class="form-group">

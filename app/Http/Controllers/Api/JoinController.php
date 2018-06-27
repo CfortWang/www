@@ -110,7 +110,7 @@ class JoinController extends Controller
         return $this->responseOK('create buyer success', $sale_id);
     }
 
-    public function sms(Request $request){
+    public function send_sms(Request $request){
         $input = Input::only('country', 'phone_num', 'lang');
 
         $validator = Validator::make($input, [
@@ -134,7 +134,7 @@ class JoinController extends Controller
 
         $type='sp_sign_up';
         $country = Country::where('seq', $country)->first();
-        $result = $this->send_sms($country->calling_code, $phoneNum, $code, $lang, $type);
+        $result = $this->sms($country->calling_code, $phoneNum, $code, $lang, $type);
 
         if ($result->code == 2) {
             PhoneNumCertification::create([
@@ -150,7 +150,7 @@ class JoinController extends Controller
         }
         // return $this->responseOK('create buyer success', '1');
     }
-    public function send_sms($callingCode, $phoneNum, $code, $lang, $type)
+    public function sms($callingCode, $phoneNum, $code, $lang, $type)
     {
         $smsContentType = [
             'default' => [
