@@ -139,7 +139,7 @@ class PayController extends Controller
           'province' => $data->province,
           'city' => isset($data->city)?$data->city:null,
           'area' => isset($data->area)?$data->area:null,
-          'recommender' => $data->recomender?$data->recomender:null,
+          'recommender' => $data->recommender?$data->recommender:null,
           'dist_q35pkg_cnt' => $dist_q35pkg_cnt,
           'sale_q35pkg_cnt' => $type->sale_q35pkg_cnt,
           'curr_q35pkg_cnt' => 0,
