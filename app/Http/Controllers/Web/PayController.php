@@ -182,6 +182,7 @@ class PayController extends Controller
               $dist_q35pkg_cnt = 0;
           break;
       }
+      $this->send_smg($data->phone_num);
       DB::commit();
       $success['status'] = true;
       $success['msg'] = '成功';
@@ -193,5 +194,38 @@ class PayController extends Controller
         $error['msg'] = '数据库写入失败'; 
         return $error;
     }
+  }
+  public function send_smg($phoneNum){
+    $smsContentType = [
+        'zh'    => '欢迎您成为喜豆beanpop销售合伙人。如果有更多业务相关的问题，可致电我们的客服中心:400-825-0266。',
+        'en'    => 'Your verification code is 【$】',
+        'ko'    => 'Your verification code is 【$】',
+        'ja'    => 'Your verification code is 【$】',
+    ];
+
+    $content = $smsContentType['zh'];
+    // $content = str_replace('$', $code, $content);
+
+    // $url = "http://api.isms.ihuyi.com/webservice/isms.php?method=Submit";
+
+    $url = "http://106.ihuyi.com/webservice/sms.php?method=Submit";
+
+    $postFields = "";
+    $postFields .= "&"."format=json";
+    $postFields .= "&"."account=".env('ISMS_IHUYI_ACCOUNT_CHINA', '');
+    $postFields .= "&"."password=".env('ISMS_IHUYI_PASSWORD_CHINA', '');
+    $postFields .= "&"."mobile=".$phoneNum;
+    $postFields .= "&"."content=".rawurlencode($content);
+    
+    $curl = curl_init();
+    curl_setopt($curl, CURLOPT_URL, $url);
+    curl_setopt($curl, CURLOPT_HEADER, false);
+    curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($curl, CURLOPT_NOBODY, true);
+    curl_setopt($curl, CURLOPT_POST, true);
+    curl_setopt($curl, CURLOPT_POSTFIELDS, $postFields);
+    $response = curl_exec($curl);
+    curl_close($curl);
+    return json_decode($response);
   }
 }

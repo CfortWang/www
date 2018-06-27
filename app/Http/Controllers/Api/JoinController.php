@@ -172,7 +172,7 @@ class JoinController extends Controller
                 'ja'    => 'Your verification code is 【$】',
             ],
             'sp_sign_up' => [
-                'zh'    => 'Your verification code is 【$】',
+                'zh'    => '您的短信验证码为【$】，请勿向任何人提供此验证码。',
                 'en'    => 'Your verification code is 【$】',
                 'ko'    => 'Your verification code is 【$】',
                 'ja'    => 'Your verification code is 【$】',
@@ -182,15 +182,15 @@ class JoinController extends Controller
         $content = $smsContentType[$type][$lang];
         $content = str_replace('$', $code, $content);
 
-        $url = "http://api.isms.ihuyi.com/webservice/isms.php?method=Submit";
+        // $url = "http://api.isms.ihuyi.com/webservice/isms.php?method=Submit";
 
-        
+        $url = "http://106.ihuyi.com/webservice/sms.php?method=Submit";
 
         $postFields = "";
         $postFields .= "&"."format=json";
-        $postFields .= "&"."account=".env('ISMS_IHUYI_ACCOUNT', '');
-        $postFields .= "&"."password=".env('ISMS_IHUYI_PASSWORD', '');
-        $postFields .= "&"."mobile=".$callingCode.' '.$phoneNum;
+        $postFields .= "&"."account=".env('ISMS_IHUYI_ACCOUNT_CHINA', '');
+        $postFields .= "&"."password=".env('ISMS_IHUYI_PASSWORD_CHINA', '');
+        $postFields .= "&"."mobile=".$phoneNum;
         $postFields .= "&"."content=".rawurlencode($content);
         
         $curl = curl_init();
