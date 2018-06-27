@@ -457,6 +457,7 @@
 .parHd-join li{
     margin: 0 -5px;
     min-width: 150px;
+    cursor: default;
 }
 
 .parHd-join-active:before{
