@@ -160,7 +160,7 @@
                         <input name="name" id="name" class="ipt form-control" placeholder="请输入姓名" />
                     </div>
                     <div class="back-div-from-input-div for-hidden">
-                        <input name="phone_num" id="phone_num" class="ipt form-control" placeholder="请输入手机号" />
+                        <input name="phone_num" id="phone_num" class="ipt form-control" placeholder="手机号码是唯一的领奖方式，请填写准确" />
                     </div>
                     <div class="alert alert-danger" style="display:none;text-align:center">成功！很好地完成了提交。</div>
                     <div class="back-div-from-input-div for-hidden">
