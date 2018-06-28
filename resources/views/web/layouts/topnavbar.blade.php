@@ -8,7 +8,7 @@
                 <span class="icon-bar"></span>
             </button>
                 <div>
-                    <a href="/"><img src="./img/xidou-icon.png"></a>
+                    <a href="/"><img src="./img/xidou-icon.svg"></a>
                     <div style="display: inline-block;vertical-align: bottom;line-height: 36px;">
                         <span class="nav-span">互动营销平台</span>
                     </div>

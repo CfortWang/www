@@ -34,5 +34,10 @@ Route::group(['namespace' => 'Web'], function() {
     Route::get('unionPayFailed','UnionPayController@unionPayFailed');
     Route::get('UnionUndo','UnionPayController@undo');
     Route::get('download/spapp','DownloadController@spapp');
-    
+
+    //Terms
+    Route::get('userProtocol','TermController@protocol');
+    Route::get('userguide','TermController@guide');
+    //wc
+    Route::get('worldcup2018','WcController@index');
 });

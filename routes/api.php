@@ -16,4 +16,5 @@ Route::group(['namespace' => 'Api'], function() {
     Route::get('location', 'LocationController@list');
     Route::post('join', 'JoinController@create');
     Route::post('join/send_sms', 'JoinController@send_sms');
+    Route::post('worldcup', 'WcController@create');
 }); 
