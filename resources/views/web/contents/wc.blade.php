@@ -44,7 +44,7 @@
                     2018年{{date('m')}}月{{date('d')}}日 赛程竞猜
                 </div>
                 <div class="back-div-title-people">
-                    本次竞猜人数：{{$sum}}人
+                    本次竞猜人数：<span class="back-dev">{{$sum}}</span>人
                 </div>
             </div>
             <div class="back-div-line"></div>
@@ -243,16 +243,17 @@
                 $('#fin').show();
                 $('.for-hidden').hide();
                 $('.select-field').hide();
+                $('.back-dev').html(parseInt($('.back-dev').html())+1);
                 $('.select-field').each(function () { 
                     $(this).next().html($(this).val());
                 });
             },
             error: function(e,response) {
-                var msg  = '发送短信失败';
+                var msg  = '未知错误';
                 if(typeof(jQuery.parseJSON(e.responseText).message)=='string'){
                     msg = jQuery.parseJSON(e.responseText).message;
                 }
-                $('.alert-danger').text('未知错误');
+                $('.alert-danger').text(msg);
                 $('.alert-danger').show();
                 $('.back-btn').attr('disabled',false);
             }
