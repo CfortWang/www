@@ -98,7 +98,7 @@
                             <label class="col-lg-3 control-label" for="type">销售合伙人类型：</label>
                             <div class="col-lg-9">
                                 <select class="form-control" id="type" name="type">
-                                    <option value="">请选择类型</option>
+                                    <option value="">请选择类型1</option>
                                     <option value="P">省级合伙人代表</option>
                                     <option value="D">市级合伙人代表</option>
                                     <option value="A">区(县)级合伙人代表</option>
