@@ -97,11 +97,15 @@
     background-color: rgba(0, 0, 0, 0.2);
     overflow-y: scroll;
 }
+#ruler{
+    display: block;
+}
 .ruler-middle{
     background: white;
     padding: 20px;
 }
 .ruler-middle-title{
+    text-align: center;
     font-size: 24px;
     font-weight: 700;
     padding-bottom: 20px;
@@ -112,7 +116,6 @@
     text-align: center;
 }
 .ruler-img{
-    text-align: right;
     margin-bottom: -40px;
 }
 .fin-bottom{
@@ -152,4 +155,36 @@
 }
 li{
     font-weight: 700;
+}
+.ruler-hide{
+    float: right;
+}
+.result-img{
+    width: 38px;
+}
+.result-time{
+    padding: 10px 20px;
+    font-size: 18px;
+}
+.result-div-normal{
+    display: inline-block;
+    text-align: center;
+    font-size: 14px;
+    padding: 2px ;
+}
+/* .result-div-left{
+    width: 25%;
+}
+.result-div-middle{
+    width: 5%;
+}
+.result-div-right{
+    width: 25%;
+}
+.result-div-right-1{
+    width: 30%;
+} */
+.result-div {
+    width: 90%;
+    margin: 0 auto;
 }

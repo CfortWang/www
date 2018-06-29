@@ -178,6 +178,9 @@
         <div class="ruler-middle">
             <div class="ruler-middle-title">
                 奖品&玩法
+                <div class="ruler-hide">
+                    <img src="./img/wc/close.svg">
+                </div>
             </div>
             <p style="padding-top: 50px">选择每支球队的进球数，</p>
             <p>根据体彩中心赔率兑换喜豆点</p>
@@ -193,9 +196,6 @@
             <li>2000人至5000人　iPad2018款</li>
             <li>1000人至2000人　DW手表</li>
             <li  style="padding-bottom: 30px">1000人以下　小米AI音响</li>
-        </div>
-        <div class="ruler-bottom">
-            <img src="./img/wc/close.svg">
         </div>
     </div>
     <div id="fin">
@@ -216,7 +216,7 @@
         $('#ruler').show();
         // $('.page').addClass('div-hidden');
     })
-    $('.ruler-bottom').click(function(){
+    $('.ruler-hide').click(function(){
         $('#ruler').hide();
     })
     $('.back-btn').click(function(){

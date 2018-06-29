@@ -40,4 +40,5 @@ Route::group(['namespace' => 'Web'], function() {
     Route::get('userguide','TermController@guide');
     //wc
     Route::get('worldcup2018','WcController@index');
+    Route::get('worldcupresult','WcController@result');
 });

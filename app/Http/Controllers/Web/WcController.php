@@ -22,9 +22,18 @@ class WcController extends Controller
     $data = WCGame::where('status','progress')->get();
     $sum = WCEntry::where('created_at','>',date("Y-m-d"))->distinct('phone_num')->count('phone_num');
     return view('web.contents.wc', [
-        'title' => '销售合伙人业务规则',
+        'title' => '竞猜',
         'data'  => $data,
         'sum'   => $sum
+    ]);
+  }
+  public function result(){
+    // $data = WCGame::where('status','progress')->get();
+    // $sum = WCEntry::where('created_at','>',date("Y-m-d"))->distinct('phone_num')->count('phone_num');
+    return view('web.contents.wcResult', [
+        'title' => '竞猜结果',
+        // 'data'  => $data,
+        // 'sum'   => $sum
     ]);
   }
 }
