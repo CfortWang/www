@@ -21,7 +21,7 @@ class TermController extends Controller
         ]);
     }
     public function guide(){
-        return view('web.contents.userProtocol', [
+        return view('web.contents.userGuide', [
             'title' => '销售合伙人业务规则',
         ]);
     }
