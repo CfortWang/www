@@ -194,12 +194,12 @@
             <li  style="padding-bottom: 30px">1000人以下　小米AI音响</li>
         </div>
         <div class="ruler-bottom">
-            <img src="./img/wc/close.png">
+            <img src="./img/wc/close.svg">
         </div>
     </div>
     <div id="fin">
         <div class="fin-top">
-            <img src="./img/wc/top.png" height="150px">
+            <img src="./img/wc/top.svg" height="150px">
         </div>
         <div class="fin-middle">
             <p>您已完成竞猜，邀请更多好友参与，</p>
