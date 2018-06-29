@@ -182,20 +182,22 @@
                     <img src="./img/wc/close.svg">
                 </div>
             </div>
-            <p style="padding-top: 50px">选择每支球队的进球数，</p>
-            <p>根据体彩中心赔率兑换喜豆点</p>
+            <p style="padding-top: 50px"> 1.	选择每支球队的进球数，猜中比分结果，</p>
+            <p>根据体彩中心赔率前往喜豆APP兑换喜豆点</p>
             <p>（在喜豆APP里可以提现），</p>
-            <p>注册成为喜豆会员，将自动获得500喜豆点。</p>
-            <p>在每日竞猜正确的会员中，抽取一人获得劲爆大奖。</p>
-            <p>奖品根据当期参与人数设定。</p>
-            <p>每个手机号每期只能参与一次竞猜。</p>
-            <p>每个比赛日早10点30公布上期获奖用户。</p>
+            <p>（基数1倍默认等于<span style="color:red"><b>100</b></span>喜豆点，例如赔率1:7，猜中比分将获得700喜豆点，）</p>
+            <p>2.	注册成为喜豆会员，获得<span style="color:red"><b>500</b></span>喜豆点</p>
+            <p>（喜豆点在喜豆APP内可直接<span style="color:red"><b>提现，100喜豆点=1 RMB</b></span>）</p>
+            <p>3.	在每日竞猜正确的用户中，抽取一人获得劲爆大奖</p>
+            <p>奖品根据当期参与人数设定</p>
             <p></p>
-            <li>１万人及以上送出华为Mate　RS</li>
-            <li>5000至１万人　iPhone　8</li>
-            <li>2000人至5000人　iPad2018款</li>
-            <li>1000人至2000人　DW手表</li>
-            <li  style="padding-bottom: 30px">1000人以下　小米AI音响</li>
+            <li>1万人以上，<span style="color:red"><b>华为MATE RS</b></span></li>
+            <li>5000-1万人，<span style="color:red"><b>iPhone 8</b></span></li>
+            <li>2000-5000人，<span style="color:red"><b>iPad 2018款</b></span></li>
+            <li>2000-1000人，<span style="color:red"><b>DW手表</b></span></li>
+            <li>1000人以下，<span style="color:red"><b>小米AI音箱</b></span></li>
+            <p>4.	每个手机号每期只能参与一次竞猜</p>
+            <p style="padding-bottom: 30px">5.	每个比赛日结束后早10:30公布上期获奖用户</p>
         </div>
     </div>
     <div id="fin">
@@ -203,12 +205,23 @@
             <img src="./img/wc/top.svg" height="150px">
         </div>
         <div class="fin-middle">
-            <p>您已完成竞猜，邀请更多好友参与，</p>
-            <p>分享快乐，提升奖品等级。</p>
+            <p>竞猜已完成</p>
+            <p>转发邀请更多好友参与，奖品更丰厚</p>
+            <p>万元大奖等你来升级！</p>
         </div>
         <div class="fin-bottom">
             <a href="javascript:;" class="fin-btn">确定</a>
         </div>
+    </div>
+    <div id="error">
+        <a href="/worldcupresult">
+            <div class="fin-top">
+                <img src="./img/wc/top.svg" height="150px">
+            </div>
+            <div class="fin-middle">
+                <p>您已完成竞猜</p>
+            </div>
+        </a>
     </div>
 </body>
 <script>
@@ -254,7 +267,7 @@
                 if(typeof(jQuery.parseJSON(e.responseText).message)=='string'){
                     msg = jQuery.parseJSON(e.responseText).message;
                     if(msg=='您已经提交过'){
-                        window.location.href="/worldcupresult"
+                       $('#error').show();
                     }
                 }
                 $('.alert-danger').text(msg);
@@ -265,6 +278,9 @@
     })
     $('.fin-btn').click(function(){
         $('#fin').hide();
+    })
+    $('.error-btn').click(function(){
+        $('#error').hide();
     })
 </script>
 </html>
