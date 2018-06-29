@@ -19,6 +19,15 @@
         margin-bottom:80px;
     }
 }
+.phone-group .form-control-feedback {
+    right: 116px!important;
+}
+@media (min-width: 1200px){
+    .col-lg-9 {
+        width: 75%;
+        margin-bottom: 10px;
+    }
+}
 </style>
     <div class="join-div-1">
         <!-- 喜豆销售合伙人申请 -->
@@ -39,9 +48,9 @@
                 <div class="col-lg-8 col-lg-offset-2">
                     <div class=" form-container" style="padding:20px 10px 50px 10px">
                         <h3>填写资料</h3>
-                        <div class="form-group  ">
+                        <div class="form-group name-group">
                             <label class="col-lg-3 control-label" for="name">用户名：</label>
-                            <div class="col-lg-9">
+                            <div class="col-lg-9 ">
                                 <input type="text" class="  form-control" id="name" name="name" >
                             </div>
                         </div>
@@ -69,11 +78,13 @@
                         </div>
                         <div class="form-group phone-group">
                             <label class="col-lg-3 control-label" for="phone_num">手机号：</label>
-                            <div class="col-lg-7">
-                                <input type="text" class="form-control" id="phone_num" name="phone_num">
-                            </div>
-                            <div class="col-lg-2">
-                                <span class="btn btn-success get-certification">获取验证码</button>
+                            <div class="col-lg-9 ">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" id="phone_num" name="phone_num">
+                                    <span class="input-group-btn">
+                                        <button type="button" class="btn btn-success get-certification">获取验证码</button>
+                                    </span>
+                                </div>
                             </div>
                         </div>
                         <div class="form-group">
@@ -108,7 +119,7 @@
                         </div>
                         <div class="form-group">
                             <label class="col-lg-3 control-label" for="recommender">推荐人：</label>
-                            <div class="col-lg-9">
+                            <div class="col-lg-9 ">
                                 <input type="text" class="form-control" id="recommender" name="recommender">
                             </div>
                         </div>
@@ -138,6 +149,7 @@
             },
             fields: {
                 name: {
+                    threshold :  4,
                     validators: {
                         notEmpty: {
                             message: '用户名不能为空'
@@ -146,7 +158,13 @@
                             min: 4,
                             max: 30,
                             message: '用户名长度必须在4到30之间'
-                        }
+                        },
+                        remote: {//ajax验证。server result:{"valid",true or false} 向服务发送当前input name值，获得一个json数据。例表示正确：{"valid",true}  
+                            url: '/api/join/check_id',//验证地址
+                            message: '用户已存在',//提示消息
+                            delay :  2000,//每输入一个字符，就发ajax请求，服务器压力还是太大，设置2秒发送一次ajax（默认输入一个字符，提交一次，服务器压力太大）
+                            type: 'POST'//请求方式
+                        },
                     }
                 },
                 password: {
@@ -227,6 +245,17 @@
                         },
                     }
                 },
+                recommender:{
+                    threshold :  4,
+                    validators: {
+                        remote: {//ajax验证。server result:{"valid",true or false} 向服务发送当前input name值，获得一个json数据。例表示正确：{"valid",true}  
+                            url: '/api/join/check_recommender',//验证地址
+                            message: '推荐人不存在',//提示消息
+                            delay :  2000,//每输入一个字符，就发ajax请求，服务器压力还是太大，设置2秒发送一次ajax（默认输入一个字符，提交一次，服务器压力太大）
+                            type: 'POST'//请求方式
+                        },
+                    }
+                }
             }
         });
         $('input.timepicker').timepicker({
@@ -418,8 +447,8 @@
             if(!$('#phone_num').val()||$('#phone_num').val().length!=11){
                 $('.phone-group').addClass('has-feedback');
                 $('.phone-group').addClass('has-error');
-                $('#phone_num').next().show()
-                $('#phone_num').next().next().show();
+                $('#phone_num').parent().next().show()
+                $('#phone_num').parent().next().next().show();
                 return false;
             }
             $.ajax({
@@ -460,9 +489,36 @@
                     $('.alert-danger').text(msg);
                     $('.alert-danger').show();
                 }
+            });
+        })
+        $('.check-id-btn').click(function(){
+            $('.alert-danger').hide();
+            if(!$('#phone_num').val()||$('#phone_num').val().length!=11){
+                $('.phone-group').addClass('has-feedback');
+                $('.phone-group').addClass('has-error');
+                $('#phone_num').parent().next().show()
+                $('#phone_num').parent().next().next().show();
+                return false;
+            }
+            $.ajax({
+                url: '/api/join/check_id',
+                dataType: 'json',
+                type: 'check',
+                data:{name:$('#name').val()} ,
+                success: function(response){
+
+                },
+                error: function(e) {
+                    console.log(e);
+                    var msg  = '发送短信失败';
+                    if(typeof(jQuery.parseJSON(e.responseText).message)=='string'){
+                        msg = jQuery.parseJSON(e.responseText).message;
+                    }
+                    $('.alert-danger').text(msg);
+                    $('.alert-danger').show();
+                }
             },'get');
         })
-
 </script>
         
 @endsection

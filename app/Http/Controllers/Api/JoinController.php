@@ -73,6 +73,9 @@ class JoinController extends Controller
         $recommender = null;
         if(isset($post['recommender'])&&$post['recommender']){
             $re_exits = PartnerAccount::where('id', $post['recommender'])->first();
+            if(!$re_exits){
+                $re_exits = PartnerAccount::where('phone_num', $post['recommender'])->first();
+            }
             if($re_exits){
                 $se_exits =  SalesPartner::where('partner_account',$re_exits->seq)->first();
                 if($se_exits){
@@ -150,6 +153,56 @@ class JoinController extends Controller
         }
         // return $this->responseOK('create buyer success', '1');
     }
+
+    public function check_id(Request $request){
+        $post = Input::only([
+            "name",
+            ]
+        );
+        
+        $id = $post['name'];
+
+        $exits1 = PartnerAccount::where('id', $id)->first();
+
+        $exits3 = SalesPartnerSignUp::where('name', $id)->first();
+
+        if($exits3||$exits1){
+            return response()->json([
+                'status'    => 200,
+                'valid'      => false,
+            ], 200, [], JSON_UNESCAPED_UNICODE);
+        }else{
+            return response()->json([
+                'status'    => 200,
+                'valid'      => true,
+            ], 200, [], JSON_UNESCAPED_UNICODE);
+        }
+    }
+
+    public function check_recommender(Request $request){
+        $post = Input::only([
+            "recommender",
+            ]
+        );
+        
+        $id = $post['recommender'];
+
+        $exits1 = PartnerAccount::where('id', $id)->first();
+        $exits3 = PartnerAccount::where('phone_num', $id)->first();
+
+        if($exits3||$exits1){
+            return response()->json([
+                'status'    => 200,
+                'valid'      => true,
+            ], 200, [], JSON_UNESCAPED_UNICODE);
+        }else{
+            return response()->json([
+                'status'    => 200,
+                'valid'      => false,
+            ], 200, [], JSON_UNESCAPED_UNICODE);
+        }
+    }
+
     public function sms($callingCode, $phoneNum, $code, $lang, $type)
     {
         $smsContentType = [

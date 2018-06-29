@@ -23,9 +23,9 @@
             <div class="pay-success-fee">用户名：<span class="pay-success-name">{{$name}}</span>  密码：<span class="pay-success-name">提交申请时设置的密码</span></div>
             <div class="pay-success-code">
                 <div class="pay-success-img">
-                    <img src="./img/qrdownload.jpg">
+                    <img src="./img/download.png">
                 </div>
-                <p class="pay-download">下载APP</p>
+                <p class="pay-download"><a href="/download/spapp" target="_blank">下载APP</a></p>
             </div>
             
         </div>

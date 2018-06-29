@@ -33,12 +33,12 @@
             </ul>
             <div class="pay-contain online-contain">
                 <div class="pay-contain-indiv" style="margin:10px">
-                    <a href="/AliPay">
+                    <a href="/AliPay" target="_blank">
                         <img src="./img/alipay.png"><span class="pay-contain-span">支付宝支付</span>
                     </a>
                 </div>
                 <div class="pay-contain-indiv" style="margin:10px">
-                    <a href="/UnionPay">
+                    <a href="/UnionPay" target="_blank">
                         <img src="./img/unionpay.png"><span class="pay-contain-span">银联支付</span>
                     </a>
                 </div>
