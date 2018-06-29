@@ -80,13 +80,14 @@
                             <label class="col-lg-3 control-label" for="phone_num">手机号：</label>
                             <div class="col-lg-9 ">
                                 <div class="input-group">
-                                    <input type="text" class="form-control" id="phone_num" name="phone_num">
+                                    <input type="text" class="form-control" id="phone_num" name="phone" onkeyup="testNum()" onkeydown="testNum()" onkeypress="testNum()">
                                     <span class="input-group-btn">
                                         <button type="button" class="btn btn-success get-certification">获取验证码</button>
                                     </span>
                                 </div>
                             </div>
                         </div>
+                        <input name="phone_num" id="phone" type="hidden"/>
                         <div class="form-group">
                             <label class="col-lg-3 control-label" for="certification">验证码：</label>
                             <div class="col-lg-9">
@@ -203,18 +204,18 @@
                         }
                     }
                 },
-                phone_num: {
+                phone: {
                     validators: {
                         notEmpty: {
                          message: '手机号码不能为空'
                         },
                         stringLength: {
-                            min: 11,
-                            max: 11,
+                            min: 13,
+                            max: 13,
                             message: '请输入11位手机号码'
                         },
                         regexp: {
-                            regexp: /^1[3|5|8]{1}[0-9]{9}$/,
+                            regexp: /^1[3|4|5|7|8]\d{1}\s\d{4}\s\d{4}$/,
                             message: '请输入正确的手机号码'
                         }
                     }
@@ -421,6 +422,9 @@
             });
         } 
         $('.btn-submit').click(function(){
+            var reg = new RegExp(" ","g");
+            var phone = $('#phone_num').val().replace(reg, "");
+            $('#phone').val(phone)
             var data = $('form').serialize();
             if($('#join-form').data('bootstrapValidator').isValid()){  
                 $('.btn-submit').attr('disabled',true);
@@ -444,18 +448,20 @@
         })
         $('.get-certification').click(function(){
             $('.alert-danger').hide();
-            if(!$('#phone_num').val()||$('#phone_num').val().length!=11){
+            if(!$('#phone_num').val()||$('#phone_num').val().length!=13){
                 $('.phone-group').addClass('has-feedback');
                 $('.phone-group').addClass('has-error');
                 $('#phone_num').parent().next().show()
                 $('#phone_num').parent().next().next().show();
                 return false;
             }
+            var reg = new RegExp(" ","g");
+            var num = $('#phone_num').val().replace(reg, "");
             $.ajax({
                 url: '/api/join/send_sms',
                 dataType: 'json',
                 type: 'post',
-                data:{phone_num:$('#phone_num').val(),country:1,lang:'zh'} ,
+                data:{phone_num:num,country:1,lang:'zh'} ,
                 success: function(response){
                     var countdown=60;
                     var obj = $('.get-certification');
@@ -491,34 +497,17 @@
                 }
             });
         })
-        $('.check-id-btn').click(function(){
-            $('.alert-danger').hide();
-            if(!$('#phone_num').val()||$('#phone_num').val().length!=11){
-                $('.phone-group').addClass('has-feedback');
-                $('.phone-group').addClass('has-error');
-                $('#phone_num').parent().next().show()
-                $('#phone_num').parent().next().next().show();
-                return false;
+        function testNum(){
+            var mobile = $('#phone_num').val();
+            var value = mobile.replace(/\D/g, '').substring(0, 11);
+            var valueLen = value.length;
+            if (valueLen > 3 && valueLen < 8) {
+                value = `${value.substr(0, 3)} ${value.substr(3)}`;
+            } else if (valueLen >= 8) {
+                value = `${value.substr(0, 3)} ${value.substr(3, 4)} ${value.substr(7)}`;
             }
-            $.ajax({
-                url: '/api/join/check_id',
-                dataType: 'json',
-                type: 'check',
-                data:{name:$('#name').val()} ,
-                success: function(response){
-
-                },
-                error: function(e) {
-                    console.log(e);
-                    var msg  = '发送短信失败';
-                    if(typeof(jQuery.parseJSON(e.responseText).message)=='string'){
-                        msg = jQuery.parseJSON(e.responseText).message;
-                    }
-                    $('.alert-danger').text(msg);
-                    $('.alert-danger').show();
-                }
-            },'get');
-        })
+            $('#phone_num').val(value)
+        }
 </script>
         
 @endsection
