@@ -7,7 +7,6 @@
 <title>用户指南</title>
 
 <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<link href="./css/font-awesome.min.css" rel="stylesheet" media="all">
 <link href="./css/animate.min.css" rel="stylesheet" media="all">
 <link href="./css/bootstrap-touch-slider.css" rel="stylesheet" media="all">
 </head>
