@@ -214,14 +214,15 @@
         </div>
     </div>
     <div id="error">
-        <a href="/worldcupresult">
-            <div class="fin-top">
-                <img src="./img/wc/top.svg" height="150px">
-            </div>
-            <div class="fin-middle">
-                <p>您已完成竞猜</p>
-            </div>
-        </a>
+        <div class="fin-top">
+            <img src="./img/wc/top.svg" height="150px">
+        </div>
+        <div class="fin-middle">
+            <p>您的账号今日已经参与竞猜,无法再次提交</p>
+        </div>
+        <div class="fin-bottom">
+            <a href="worldcupresult" >查看竞猜记录</a>
+        </div>
     </div>
 </body>
 <script>

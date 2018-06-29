@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>竞猜</title>
+    <title>竞猜记录</title>
     <link rel="icon" href="/img/seedo.ico" type="image/x-icon">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
@@ -44,7 +44,7 @@
                     <div class="result-div @if ($da->status=='complete')
                     result-done
                         @endif
-                        @if ($da->home_team_score == $da->fin_home_score&&$da->away_team_score == $da->fin_away_score)
+                        @if ($da->home_team_score === $da->fin_home_score&&$da->away_team_score === $da->fin_away_score)
                     result-success
                         @endif" >
                         <div class="result-div-normal result-div-left">
@@ -61,7 +61,7 @@
                         <div class="result-div-normal result-div-right-1 result-div-right-success">
                             <span>投注比分{{$da->home_team_score}}：{{$da->away_team_score}}</span>
                         </div>
-                        @if ($da->home_team_score == $da->fin_home_score&&$da->away_team_score == $da->fin_away_score)
+                        @if ($da->home_team_score === $da->fin_home_score&&$da->away_team_score === $da->fin_away_score)
                         <div class="result-div-normal ">
                             <span class="result-div-success-span">猜中了</span>
                         </div>

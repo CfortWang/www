@@ -200,9 +200,7 @@ li{
 .result-div-left ,.result-div-right{
     min-width: 78px;
 }
-#error .fin-middle{
-    padding: 80px 20px;
-}
+
 #error a{
     color:#333;
 }
