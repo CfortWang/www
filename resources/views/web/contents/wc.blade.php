@@ -238,12 +238,12 @@
         var name = $('#name').val();
         var phone_num = $('#phone_num').val();
         if(!name){
-            $('.alert-danger').text('清输入姓名');
+            $('.alert-danger').text('请输入姓名');
             $('.alert-danger').show();
             return false;
         }
         if(!phone_num){
-            $('.alert-danger').text('清输入手机号');
+            $('.alert-danger').text('请输入手机号');
             $('.alert-danger').show();
             return false;
         }
