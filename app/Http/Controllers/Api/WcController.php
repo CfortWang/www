@@ -19,7 +19,7 @@ class WcController extends Controller
 		$this->title = '首页';
 	}
 
-	public function create()
+	public function create(Request $request)
 	{
 		$post = Input::only([
 			"home",
@@ -50,6 +50,7 @@ class WcController extends Controller
 						'wc_game' => $key,
 					]);
 				}else{
+					$request->session()->put('wc_phone_num',$post['phone_num']);
 					return $this->responseConflict('您已经提交过');
 				}
 			}else{

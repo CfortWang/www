@@ -35,31 +35,44 @@
             </div>
         </div>
         <div class="back-contain">
-            <div>
+        @foreach ($data as $dat)
+            <div class="result-day-contain">
                 <div class="result-time">
-                    投注时间
+                    投注时间：{{$dat['time']}}
                 </div>
-                <div class="result-div ">
-                    <div class="result-div-normal result-div-left">
-                        <img src="./img/wc/japan.jpg" class="result-img"> 
-                        <span>日本</span> 
+                @foreach ($dat['data'] as $da)
+                    <div class="result-div @if ($da->status=='complete')
+                    result-done
+                        @endif
+                        @if ($da->home_team_score == $da->fin_home_score&&$da->away_team_score == $da->fin_away_score)
+                    result-success
+                        @endif" >
+                        <div class="result-div-normal result-div-left">
+                            <img src="./img/wc/{{$da->home_team_image_file_name}}" class="result-img"> 
+                            <span>{{$da->home_team_name}}</span> 
+                        </div>
+                        <div class="result-div-normal result-div-middle">
+                            <span>VS</span>
+                        </div>
+                        <div class="result-div-normal result-div-right">
+                            <img src="./img/wc/{{$da->away_team_image_file_name}}" class="result-img"> 
+                            <span>{{$da->away_team_name}}</span>
+                        </div>
+                        <div class="result-div-normal result-div-right-1 result-div-right-success">
+                            <span>投注比分{{$da->home_team_score}}：{{$da->away_team_score}}</span>
+                        </div>
+                        @if ($da->home_team_score == $da->fin_home_score&&$da->away_team_score == $da->fin_away_score)
+                        <div class="result-div-normal ">
+                            <span class="result-div-success-span">猜中了</span>
+                        </div>
+                        @endif
                     </div>
-                    <div class="result-div-normal result-div-middle">
-                        <span>VS</span>
-                    </div>
-                    <div class="result-div-normal result-div-right">
-                        <img src="./img/wc/england.jpg" class="result-img"> 
-                        <span>英国</span>
-                    </div>
-                    <div class="result-div-normal result-div-right-1">
-                        <span>投注比分1：7</span>
-                    </div>
-                    <div class="result-div-normal ">
-                        <span>猜中了</span>
-                    </div>
-                </div>
+                @endforeach
+                
             </div>
             <div class="back-div-line"></div>
+        @endforeach
+            
     </div>
 </body>
 </html>

@@ -253,6 +253,9 @@
                 var msg  = '未知错误';
                 if(typeof(jQuery.parseJSON(e.responseText).message)=='string'){
                     msg = jQuery.parseJSON(e.responseText).message;
+                    if(msg=='您已经提交过'){
+                        window.location.href="/worldcupresult"
+                    }
                 }
                 $('.alert-danger').text(msg);
                 $('.alert-danger').show();
