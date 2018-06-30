@@ -25,5 +25,11 @@ class TermController extends Controller
             'title' => '销售合伙人业务规则',
         ]);
     }
+
+     public function event(){
+        return view('web.contents.userEvent', [
+            'title' => '活动',
+        ]);
+    }
   
 }

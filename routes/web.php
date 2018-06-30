@@ -35,9 +35,11 @@ Route::group(['namespace' => 'Web'], function() {
     Route::get('UnionUndo','UnionPayController@undo');
     Route::get('download/spapp','DownloadController@spapp');
 
-    //Terms
+    //user
     Route::get('userProtocol','TermController@protocol');
     Route::get('userguide','TermController@guide');
+    Route::get('userevent','TermController@event');
+
     //wc
     Route::get('worldcup2018','WcController@index');
     Route::get('worldcupresult','WcController@result');

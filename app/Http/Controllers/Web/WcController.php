@@ -20,7 +20,7 @@ class WcController extends Controller
   public function index()
   {
     $data = WCGame::where('status','progress')->get();
-    $sum = WCEntry::where('created_at','>',date("Y-m-d"))->distinct('phone_num')->count('phone_num');
+    $sum = WCEntry::where('created_at','>',$data[0]->open_time)->distinct('phone_num')->count('phone_num');
     return view('web.contents.wc', [
         'title' => '竞猜',
         'data'  => $data,
