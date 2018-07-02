@@ -18,6 +18,7 @@
 
 <body>
     <!-- Wrapper-->
+    <img src="./img/wc/theme.jpg" style="display:none">
     <div class="page">
         <div id="wrapper">
             <div id="page-wrapper" class="gray-bg">
