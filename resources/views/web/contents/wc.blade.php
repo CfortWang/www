@@ -12,11 +12,19 @@
     <meta name=”description” content="喜豆是一家运用区块链技术的互动竞猜营销平台，用全新的运营理念和营销思维，专注于服务消费品牌及零售业客户，为品牌及零售业客户带来二次销售及连带销售，建立线上获利+线下消费的生态，刺激线上消费、助力线下实体经济。通过构筑销售合伙人模式，将互联网产品思维与传统零售优势相结合，为商家和品牌创造价值。" />
     <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/wc.css">
+    <link rel="stylesheet" type="text/css" href="./css/bootstrapValidator.css" />
     <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
     <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="./js/bootstrapValidator.min.js"></script>
 </head>
 
 <body>
+<style>
+.form-horizontal .form-group {
+    margin-right: auto;
+    margin-left: auto;
+}
+</style>
     <!-- Wrapper-->
     <img src="./img/wc/theme.jpg" style="width:0px;height:0px">
     <div class="page">
@@ -50,7 +58,7 @@
             </div>
             <div class="back-div-line"></div>
             <div class="back-div-form">
-                <form id="back">
+                <form id="back" class="form-horizontal">
                 <div class="row">
                     @if (count($data) === 0)
                         <div class="empty">
@@ -157,10 +165,10 @@
                         </div>
                         @endforeach
                     @endif
-                    <div class="back-div-from-input-div for-hidden">
+                    <div class=" form-group back-div-from-input-div  for-hidden">
                         <input name="name" id="name" class="ipt form-control" placeholder="请输入姓名" />
                     </div>
-                    <div class="back-div-from-input-div for-hidden">
+                    <div class="form-group back-div-from-input-div  for-hidden">
                         <input name="phone_num" id="phone_num" class="ipt form-control" placeholder="手机号码是唯一的领奖方式，请填写准确" />
                     </div>
                     <div class="alert alert-danger" style="display:none;text-align:center">成功！很好地完成了提交。</div>
@@ -183,23 +191,17 @@
                     <img src="./img/wc/close.svg">
                 </div>
             </div>
-            <p style="padding-top: 50px"> 1.	选择每支球队的进球数，猜中比分结果，包括加时赛但不包括点球大战进球</p>
-            <p>根据体彩中心赔率前往喜豆APP兑换喜豆点</p>
-            <p>（基数1倍默认等于<span style="color:red"><b>100</b></span>喜豆点，例如赔率1:7，猜中比分将获得700喜豆点）</p>
-            <p>2.	注册成为喜豆会员，即可得<span style="color:red"><b>500</b></span>喜豆点</p>
-            <p>（喜豆点在喜豆APP内用于兑换礼品，参与竞猜和提现<span style="color:red"><b>100喜豆点=1 RMB</b></span>）</p>
-            <p>3.	在每日竞猜正确的用户中，抽取一人获得劲爆大奖</p>
-            <p>奖品根据当期参与人数设定</p>
-            <p></p>
-            <li>1万人以上，<span style="color:red"><b>华为MATE RS</b></span></li>
-            <li>5000-1万人，<span style="color:red"><b>iPhone 8</b></span></li>
-            <li>2000-5000人，<span style="color:red"><b>iPad 2018款</b></span></li>
-            <li>2000-1000人，<span style="color:red"><b>DW手表</b></span></li>
-            <li>1000人以下，<span style="color:red"><b>小米AI音箱</b></span></li>
-            <p></p>
-            <p>7月15日喜豆将从世界杯结束当天，从所有未中奖的用户中抽取10位获得神秘好礼。</p>
-            <p>4.	每个手机号每期只能参与一次竞猜</p>
-            <p style="padding-bottom: 30px">5.	每个比赛日结束后早10:30公布上期获奖用户</p>
+            <p style="padding-top: 50px"> 1.	预测每支球队的进球数，包括加时赛但不包括点球大战进球。</p>
+            <p>2.	竞猜得奖，猜中一场比分得5元话费券，依次累积，三个工作日内到账。</p>
+            <p>3.	参与竞猜，立得500喜豆点。</p>
+            <p>4.	人人有份，支付宝现金红包随机发！只要参与竞猜，提交信息成功后，即可瓜分以下对应现金，参与人数越多，奖金越大，名单公布一个工作日内到账，填写的手机号默认为支付宝账号。</p>
+            <p>
+                <img src="./img/wc/dd.png" style="max-width:100%">
+            </p>
+            <p>5.	每期开奖详情，请务必关注公众号  「喜豆BeanPOP」。</p>
+            <p>（喜豆APP内可进行现金兑换，100喜豆点=1元）</p>
+
+            <p style="padding-bottom: 30px">6.	每个比赛日结束后早12:00公布上期获奖用户。</p>
         </div>
     </div>
     <div id="fin">
@@ -228,6 +230,44 @@
     </div>
 </body>
 <script>
+    $('#back').bootstrapValidator({
+            message: 'This value is not valid',
+            feedbackIcons: {
+                valid: 'glyphicon glyphicon-ok',
+                invalid: 'glyphicon glyphicon-remove',
+                validating: 'glyphicon glyphicon-refresh'
+            },
+            fields: {
+                name: {
+                    validators: {
+                        notEmpty: {
+                            message: '姓名不能为空'
+                        },
+                        stringLength: {
+                            min: 2,
+                            max: 30,
+                            message: '请输入姓名'
+                        },
+                    }
+                },
+                phone_num: {
+                    validators: {
+                        notEmpty: {
+                         message: '手机号码不能为空'
+                        },
+                        stringLength: {
+                            min: 11,
+                            max: 11,
+                            message: '请输入11位手机号码'
+                        },
+                        regexp: {
+                            regexp: /^1[3|4|5|7|8]\d{1}\d{4}\d{4}$/,
+                            message: '请输入正确的手机号码'
+                        }
+                    }
+                },
+            }
+        });
     $('.nav-right').click(function(){
         $('#ruler').show();
         // $('.page').addClass('div-hidden');
@@ -237,47 +277,39 @@
     })
     $('.back-btn').click(function(){
         $('.alert-danger').hide();
-        var name = $('#name').val();
-        var phone_num = $('#phone_num').val();
-        if(!name){
-            $('.alert-danger').text('请输入姓名');
-            $('.alert-danger').show();
-            return false;
-        }
-        if(!phone_num){
-            $('.alert-danger').text('请输入手机号');
-            $('.alert-danger').show();
-            return false;
-        }
-        var data = $('form').serialize();
-        $('.back-btn').attr('disabled',true);
-        $.ajax({
-            url: '/api/worldcup',
-            dataType: 'json',
-            type: 'POST',
-            data:data,
-            success: function(response){
-                $('#fin').show();
-                $('.for-hidden').hide();
-                $('.select-field').hide();
-                $('.back-dev').html(parseInt($('.back-dev').html())+1);
-                $('.select-field').each(function () { 
-                    $(this).next().html($(this).val());
-                });
-            },
-            error: function(e,response) {
-                var msg  = '未知错误';
-                if(typeof(jQuery.parseJSON(e.responseText).message)=='string'){
-                    msg = jQuery.parseJSON(e.responseText).message;
-                    if(msg=='您已经提交过'){
-                       $('#error').show();
+        if($('#back').data('bootstrapValidator').isValid()){
+            var data = $('form').serialize();
+            $('.back-btn').attr('disabled',true);
+            $.ajax({
+                url: '/api/worldcup',
+                dataType: 'json',
+                type: 'POST',
+                data:data,
+                success: function(response){
+                    $('#fin').show();
+                    $('.for-hidden').hide();
+                    $('.select-field').hide();
+                    $('.back-dev').html(parseInt($('.back-dev').html())+1);
+                    $('.select-field').each(function () { 
+                        $(this).next().html($(this).val());
+                    });
+                },
+                error: function(e,response) {
+                    var msg  = '未知错误';
+                    if(typeof(jQuery.parseJSON(e.responseText).message)=='string'){
+                        msg = jQuery.parseJSON(e.responseText).message;
+                        if(msg=='您已经提交过'){
+                        $('#error').show();
+                        }
                     }
+                    $('.alert-danger').text(msg);
+                    $('.alert-danger').show();
+                    $('.back-btn').attr('disabled',false);
                 }
-                $('.alert-danger').text(msg);
-                $('.alert-danger').show();
-                $('.back-btn').attr('disabled',false);
-            }
-        });
+            });
+        } else{
+            $('#back').data('bootstrapValidator').validate();
+        }
     })
     $('.fin-btn').click(function(){
         $('#fin').hide();
