@@ -18,7 +18,7 @@
 
 <body>
     <!-- Wrapper-->
-    <img src="./img/wc/theme.jpg" style="display:none">
+    <img src="./img/wc/theme.jpg" style="width:0px;height:0px">
     <div class="page">
         <div id="wrapper">
             <div id="page-wrapper" class="gray-bg">
@@ -183,12 +183,11 @@
                     <img src="./img/wc/close.svg">
                 </div>
             </div>
-            <p style="padding-top: 50px"> 1.	选择每支球队的进球数，猜中比分结果，</p>
+            <p style="padding-top: 50px"> 1.	选择每支球队的进球数，猜中比分结果，包括加时赛和点球大战进球</p>
             <p>根据体彩中心赔率前往喜豆APP兑换喜豆点</p>
-            <p>（在喜豆APP里可以提现），</p>
-            <p>（基数1倍默认等于<span style="color:red"><b>100</b></span>喜豆点，例如赔率1:7，猜中比分将获得700喜豆点，）</p>
-            <p>2.	注册成为喜豆会员，获得<span style="color:red"><b>500</b></span>喜豆点</p>
-            <p>（喜豆点在喜豆APP内可直接<span style="color:red"><b>提现，100喜豆点=1 RMB</b></span>）</p>
+            <p>（基数1倍默认等于<span style="color:red"><b>100</b></span>喜豆点，例如赔率1:7，猜中比分将获得700喜豆点）</p>
+            <p>2.	注册成为喜豆会员，即可得<span style="color:red"><b>500</b></span>喜豆点</p>
+            <p>（喜豆点在喜豆APP内用于兑换礼品，参与竞猜和提现<span style="color:red"><b>100喜豆点=1 RMB</b></span>）</p>
             <p>3.	在每日竞猜正确的用户中，抽取一人获得劲爆大奖</p>
             <p>奖品根据当期参与人数设定</p>
             <p></p>
@@ -197,6 +196,8 @@
             <li>2000-5000人，<span style="color:red"><b>iPad 2018款</b></span></li>
             <li>2000-1000人，<span style="color:red"><b>DW手表</b></span></li>
             <li>1000人以下，<span style="color:red"><b>小米AI音箱</b></span></li>
+            <p></p>
+            <p>7月15日喜豆将从世界杯结束当天，从所有未中奖的用户中抽取10位获得神秘好礼。</p>
             <p>4.	每个手机号每期只能参与一次竞猜</p>
             <p style="padding-bottom: 30px">5.	每个比赛日结束后早10:30公布上期获奖用户</p>
         </div>
