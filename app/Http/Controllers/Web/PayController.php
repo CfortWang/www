@@ -11,6 +11,9 @@ use App\Models\SalesPartnerSignUp;
 use App\Models\PartnerAccount;
 use App\Models\SalesPartner;
 use App\Models\SalesPartnerType;
+
+use Carbon\Carbon;
+
 class PayController extends Controller
 {
 
@@ -151,6 +154,7 @@ class PayController extends Controller
           'distributor' => $distributor,
           'agency' => $agency,
           'status' => 'registered',
+          'premium_paid_at' => Carbon::now()
       ]; 
       $sale_id = SalesPartner::create($sale_data);
       switch ($data->type) {

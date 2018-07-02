@@ -183,7 +183,7 @@
                     <img src="./img/wc/close.svg">
                 </div>
             </div>
-            <p style="padding-top: 50px"> 1.	选择每支球队的进球数，猜中比分结果，包括加时赛和点球大战进球</p>
+            <p style="padding-top: 50px"> 1.	选择每支球队的进球数，猜中比分结果，包括加时赛但不包括点球大战进球</p>
             <p>根据体彩中心赔率前往喜豆APP兑换喜豆点</p>
             <p>（基数1倍默认等于<span style="color:red"><b>100</b></span>喜豆点，例如赔率1:7，猜中比分将获得700喜豆点）</p>
             <p>2.	注册成为喜豆会员，即可得<span style="color:red"><b>500</b></span>喜豆点</p>
