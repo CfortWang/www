@@ -45,7 +45,7 @@
     <div class="join-contain " >
         <div class="join-input-1">
             <div class="row">
-                <div class="col-lg-8 col-lg-offset-2">
+                <div class="col-lg-12 col-lg-offset-0">
                     <div class=" form-container" style="padding:20px 10px 50px 10px">
                         <h3>填写资料</h3>
                         <div class="form-group name-group">
@@ -98,7 +98,7 @@
                             <label class="col-lg-3 control-label" for="type">销售合伙人类型：</label>
                             <div class="col-lg-9">
                                 <select class="form-control" id="type" name="type">
-                                    <option value="">请选择类型1</option>
+                                    <option value="">请选择类型</option>
                                     <option value="P">省级合伙人代表</option>
                                     <option value="D">市级合伙人代表</option>
                                     <option value="A">区(县)级合伙人代表</option>
