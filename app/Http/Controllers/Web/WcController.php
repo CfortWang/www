@@ -21,7 +21,6 @@ class WcController extends Controller
 
 	public function index()
 	{
-		dd(env('WECHAT_GROUP_APP_ID', ''));
 		$data = WCGame::where('status','progress')->get();
 		$sum = WCEntry::where('seq','>',0)->distinct('phone_num')->count('phone_num');
 		$timestamp = time();
