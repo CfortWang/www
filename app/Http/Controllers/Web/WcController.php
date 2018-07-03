@@ -62,17 +62,20 @@ class WcController extends Controller
 			$data['secret'] = env('WECHAT_GROUP_APP_SECRET', '');
 			$url = 'https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid='.$data['appid'].'&secret='.$data['secret'];
 			$result = json_decode(file_get_contents($url));
-			Cache::put('wechat_access_token', $result->access_token, 120);
-			$t_url = 'https://api.weixin.qq.com/cgi-bin/ticket/getticket?access_token='.$result->access_token.'&type=jsapi';
-			$t_result = json_decode(file_get_contents($t_url));
-			$wechat_access_ticket = $t_result->ticket;
-			Cache::put('wechat_access_ticket', $result->ticket, 120);
+			if($result){
+				Cache::put('wechat_access_token', $result->access_token, 120);
+				$t_url = 'https://api.weixin.qq.com/cgi-bin/ticket/getticket?access_token='.$result->access_token.'&type=jsapi';
+				$t_result = json_decode(file_get_contents($t_url));
+				$wechat_access_ticket = $t_result->ticket;
+				Cache::put('wechat_access_ticket', $result->ticket, 120);
+				$string = 'jsapi_ticket='.$wechat_access_ticket.'&noncestr='.$nonceStr.'&timestamp='.$timestamp.'&url='.'http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
+				$signature = sha1($string);
+				return $signature;
+			}
 		}else{
 			$wechat_access_ticket =  Cache::get('wechat_access_ticket');
+			return '';
 		}
 
-		$string = 'jsapi_ticket='.$wechat_access_ticket.'&noncestr='.$nonceStr.'&timestamp='.$timestamp.'&url='.'http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
-		$signature = sha1($string);
-		return $signature;
 	}
 }
