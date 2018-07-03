@@ -150,7 +150,7 @@
         <div class="w">
             <ul id="right-nav-list1">
                 <li><a class="normal-number"><img src="./img/phone.png" style="width: 40px;height: 40px;margin: 10px;"></a>
-                    <div style="font-size: 14px;color:white;">0755-83830566</div>
+                    <div style="font-size: 12px;color:white;">0755-83830566</div>
                 </li>
                 <li><a id="up" style="display: none"><img src="./img/backtop.png" style="width: 40px;height: 40px;margin: 10px;"></a></li>
             </ul>
