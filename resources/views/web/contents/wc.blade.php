@@ -331,6 +331,10 @@
     wx.ready(function(){
         console.log('12');
     });
+    wx.error(function(res){
+        return false;
+        // config信息验证失败会执行error函数，如签名过期导致验证失败，具体错误信息可以打开config的debug模式查看，也可以在返回的res参数中查看，对于SPA可以在这里更新签名。
+    });
     var we_title = '你来！这里有七万现金等着送出去！';
     var we_desc = '世界杯竞猜再升级，猜对猜错都有奖，再也不用去天台了…';
     var we_img = 'http://www.beanpop.cn/img/seedo.png';
