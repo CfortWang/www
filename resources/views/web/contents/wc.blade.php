@@ -340,7 +340,8 @@
         imgUrl: we_img, // 分享图标
         success: function () {
         // 用户点击了分享后执行的回调函数
-    };
+        }
+    });
     wx.onMenuShareAppMessage({
         title: we_title, // 分享标题
         desc: we_desc, // 分享描述
