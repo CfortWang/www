@@ -57,8 +57,8 @@ class WcController extends Controller
 	}
 	protected function wechat_signature($timestamp,$nonceStr)
 	{
-		// $wechat_access_token = Cache::get('wechat_access_token');
-		// if(!$wechat_access_token){
+		$wechat_access_token = Cache::get('wechat_access_token');
+		if(!$wechat_access_token){
 			$data['appid'] = env('WECHAT_GROUP_APP_ID', '');
 			$data['secret'] = env('WECHAT_GROUP_APP_SECRET', '');
 			$url = 'https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid='.$data['appid'].'&secret='.$data['secret'];
@@ -77,11 +77,11 @@ class WcController extends Controller
 			else{
 				return '';
 			}
-		// }else{
-		// 	$wechat_access_ticket =  Cache::get('wechat_access_ticket');
-		// 	$string = 'jsapi_ticket='.$wechat_access_ticket.'&noncestr='.$nonceStr.'&timestamp='.$timestamp.'&url='.'http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
-		// 	$signature = sha1($string);
-		// 	return $signature;
-		// }
+		}else{
+			$wechat_access_ticket =  Cache::get('wechat_access_ticket');
+			$string = 'jsapi_ticket='.$wechat_access_ticket.'&noncestr='.$nonceStr.'&timestamp='.$timestamp.'&url='.'http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
+			$signature = sha1($string);
+			return $signature;
+		}
 	}
 }
