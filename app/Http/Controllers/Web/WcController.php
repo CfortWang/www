@@ -62,7 +62,7 @@ class WcController extends Controller
 			$data['secret'] = env('WECHAT_GROUP_APP_SECRET', '');
 			$url = 'https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid='.$data['appid'].'&secret='.$data['secret'];
 			$result = json_decode(file_get_contents($url));
-			if($result){
+			if(isset($result->access_token)){
 				Cache::put('wechat_access_token', $result->access_token, 120);
 				$t_url = 'https://api.weixin.qq.com/cgi-bin/ticket/getticket?access_token='.$result->access_token.'&type=jsapi';
 				$t_result = json_decode(file_get_contents($t_url));
