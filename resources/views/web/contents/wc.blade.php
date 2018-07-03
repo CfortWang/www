@@ -231,6 +231,7 @@
     </div>
 </body>
 <script src="./js/bootstrapValidator.min.js"></script>
+<script src="./js/jweixin-1.2.0.js"></script>
 <script>
     $('#back').bootstrapValidator({
             message: 'This value is not valid',
@@ -319,15 +320,73 @@
     $('.error-btn').click(function(){
         $('#error').hide();
     })
-    var dataForWeixin={
-        appId:"",
-        MsgImg:"http://www.beanpop.cn/img/seedo.png",
-        TLImg:"http://www.beanpop.cn/img/seedo.pngg",
-        url:"http://www.beanpop.cn/worldcup2018",
-        title:"你来！这里有七万现金等着送出去！",
-        desc:"世界杯竞猜再升级，猜对猜错都有奖，再也不用去天台了…",
-        fakeid:"",
-        callback:function(){}
+    wx.config({
+        debug: true, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
+        appId: "{{$appId}}", // 必填，公众号的唯一标识
+        timestamp: "{{$timestamp}}", // 必填，生成签名的时间戳
+        nonceStr: "{{$nonceStr}}", // 必填，生成签名的随机串
+        signature: "{{$signature}}",// 必填，签名
+        jsApiList: ['onMenuShareTimeline','onMenuShareAppMessage','onMenuShareQQ','onMenuShareWeibo','onMenuShareQZone'] // 必填，需要使用的JS接口列表
+    });
+    wx.ready(function(){
+        console.log('12');
+    });
+    var we_title = '你来！这里有七万现金等着送出去！';
+    var we_desc = '世界杯竞猜再升级，猜对猜错都有奖，再也不用去天台了…';
+    var we_img = 'http://www.beanpop.cn/img/seedo.png';
+    wx.onMenuShareTimeline({
+        title: we_title, // 分享标题
+        link: '', // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
+        imgUrl: we_img, // 分享图标
+        success: function () {
+        // 用户点击了分享后执行的回调函数
     };
+    wx.onMenuShareAppMessage({
+        title: we_title, // 分享标题
+        desc: we_desc, // 分享描述
+        link: '', // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
+        imgUrl: we_img, // 分享图标
+        type: '', // 分享类型,music、video或link，不填默认为link
+        dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
+        success: function () {
+        // 用户点击了分享后执行的回调函数
+        }
+    });
+    wx.onMenuShareQQ({
+        title: we_title, // 分享标题
+        desc: we_desc, // 分享描述
+        link: '', // 分享链接
+        imgUrl: we_img, // 分享图标
+        success: function () {
+        // 用户确认分享后执行的回调函数
+        },
+        cancel: function () {
+        // 用户取消分享后执行的回调函数
+        }
+    });
+    wx.onMenuShareWeibo({
+        title: we_title, // 分享标题
+        desc: we_desc, // 分享描述
+        link: '', // 分享链接
+        imgUrl: we_img, // 分享图标
+        success: function () {
+        // 用户确认分享后执行的回调函数
+        },
+        cancel: function () {
+        // 用户取消分享后执行的回调函数
+        }
+    });
+    wx.onMenuShareQZone({
+        title: we_title, // 分享标题
+        desc: we_desc, // 分享描述
+        link: '', // 分享链接
+        imgUrl: we_img, // 分享图标
+        success: function () {
+        // 用户确认分享后执行的回调函数
+        },
+        cancel: function () {
+        // 用户取消分享后执行的回调函数
+        }
+    });
 </script>
 </html>

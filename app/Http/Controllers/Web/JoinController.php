@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Web;
 
 use App\Http\Controllers\Controller;
-
+use Cache;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
