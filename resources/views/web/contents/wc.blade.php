@@ -192,16 +192,15 @@
                 </div>
             </div>
             <p style="padding-top: 50px"> 1.	<span style="color:#F7B42B">人人有份，三万元支付宝现金红包随机发</span>！只要加入竞猜，提交信息成功后，<span style="color:#F7B42B">即可瓜分以下对应现金，参与人数越多，奖金越大</span>，名单公布后一个工作日内到账，填写的手机号默认为支付宝账号。</p>
+            <p style="color:#F7B42B">例如：竞猜人数满100，发600元红包；人数满12800，发3万元红包</p>
             <p>
                 <img src="./img/wc/dd.png" style="max-width:100%">
             </p>
             <p>2.	参与竞猜，立得500喜豆点=5元现金，APP内兑现。</p>
             <p>3.	竞猜得奖，猜中一场比分得5元话费券，依次累积，三个工作日内到账。</p>
             <p>4.	点球大战进球数不计入整场比分。</p>
-            <p >5.	比赛结束次日上午12点公布开奖详情，请务必关注公众号 【喜豆BeanPOP】。</p>
-            <p style="padding-bottom: 30px">
-                <img src="./img/qrwechat.jpg" style="max-width:100%">
-            </p>
+            <p style="padding-bottom: 30px">5.	比赛结束次日上午12点公布开奖详情，请务必关注公众号 【喜豆BeanPOP】。</p>
+            
         </div>
     </div>
     <div id="fin">
@@ -209,9 +208,11 @@
             <img src="./img/wc/top.svg" height="150px">
         </div>
         <div class="fin-middle">
-            <p>竞猜已完成</p>
-            <p>转发邀请更多好友参与，奖品更丰厚</p>
-            <p>万元大奖等你来升级！</p>
+            <p>邀请好友来竞猜，拿更多红包</p>
+            <p >
+                <img src="./img/qrwechat.jpg" style="max-width:140px">
+            </p>
+            <p style="font-size:14px">识别二维码 关注公众号 了解开奖详情</p>
         </div>
         <div class="fin-bottom">
             <a href="javascript:;" class="fin-btn">确定</a>
@@ -317,5 +318,15 @@
     $('.error-btn').click(function(){
         $('#error').hide();
     })
+    var dataForWeixin={
+        appId:"",
+        MsgImg:"http://www.beanpop.cn/img/seedo.png",
+        TLImg:"http://www.beanpop.cn/img/seedo.pngg",
+        url:"http://www.beanpop.cn/worldcup2018",
+        title:"你来！这里有七万现金等着送出去！",
+        desc:"世界杯竞猜再升级，猜对猜错都有奖，再也不用去天台了…",
+        fakeid:"",
+        callback:function(){}
+    };
 </script>
 </html>
