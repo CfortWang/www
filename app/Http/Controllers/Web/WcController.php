@@ -34,6 +34,7 @@ class WcController extends Controller
 			'signature' => $signature,
 			'timestamp' => $timestamp,
 			'nonceStr' => $nonceStr,
+			'ticket'  =>Cache::get('wechat_access_ticket'),
 		]);
 	}
 	public function result(Request $request){
@@ -67,7 +68,7 @@ class WcController extends Controller
 				$t_url = 'https://api.weixin.qq.com/cgi-bin/ticket/getticket?access_token='.$result->access_token.'&type=jsapi';
 				$t_result = json_decode(file_get_contents($t_url));
 				$wechat_access_ticket = $t_result->ticket;
-				Cache::put('wechat_access_ticket', $result->ticket, 120);
+				Cache::put('wechat_access_ticket', $t_result->ticket, 120);
 				$string = 'jsapi_ticket='.$wechat_access_ticket.'&noncestr='.$nonceStr.'&timestamp='.$timestamp.'&url='.'http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
 				$signature = sha1($string);
 				return $signature;

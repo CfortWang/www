@@ -330,6 +330,7 @@
     });
     wx.ready(function(){
         console.log('12');
+        console.log('{{$ticket}}')
     });
     wx.error(function(res){
         return false;
