@@ -130,6 +130,11 @@
     }
 }
 
+@media (min-height: 1270px) {
+    .copyright{
+        margin-top: 50px;
+    }
+}
 
 
 /* .middle-text3{
