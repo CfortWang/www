@@ -72,10 +72,14 @@ class WcController extends Controller
 				$signature = sha1($string);
 				return $signature;
 			}
+			else{
+				return '';
+			}
 		}else{
 			$wechat_access_ticket =  Cache::get('wechat_access_ticket');
-			return '';
+			$string = 'jsapi_ticket='.$wechat_access_ticket.'&noncestr='.$nonceStr.'&timestamp='.$timestamp.'&url='.'http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
+			$signature = sha1($string);
+			return $signature;
 		}
-
 	}
 }
