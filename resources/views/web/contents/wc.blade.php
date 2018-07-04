@@ -329,71 +329,69 @@
         jsApiList: ['onMenuShareTimeline','onMenuShareAppMessage','onMenuShareQQ','onMenuShareWeibo','onMenuShareQZone'] // 必填，需要使用的JS接口列表
     });
     wx.ready(function(){
-        console.log('12');
-        console.log('{{$ticket}}')
+        var we_title = '你来！这里有七万现金等着送出去！';
+        var we_desc = '世界杯竞猜再升级，猜对猜错都有奖，再也不用去天台了…';
+        var we_img = 'http://www.beanpop.cn/img/seedo.png';
+        var we_link = window.location.href;
+        wx.onMenuShareTimeline({
+            title: we_title, // 分享标题
+            link: we_link, // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
+            imgUrl: we_img, // 分享图标
+            success: function () {
+            // 用户点击了分享后执行的回调函数
+            }
+        });
+        wx.onMenuShareAppMessage({
+            title: we_title, // 分享标题
+            desc: we_desc, // 分享描述
+            link: we_link, // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
+            imgUrl: we_img, // 分享图标
+            type: '', // 分享类型,music、video或link，不填默认为link
+            dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
+            success: function () {
+            // 用户点击了分享后执行的回调函数
+            }
+        });
+        wx.onMenuShareQQ({
+            title: we_title, // 分享标题
+            desc: we_desc, // 分享描述
+            link: we_link, // 分享链接
+            imgUrl: we_img, // 分享图标
+            success: function () {
+            // 用户确认分享后执行的回调函数
+            },
+            cancel: function () {
+            // 用户取消分享后执行的回调函数
+            }
+        });
+        wx.onMenuShareWeibo({
+            title: we_title, // 分享标题
+            desc: we_desc, // 分享描述
+            link: we_link, // 分享链接
+            imgUrl: we_img, // 分享图标
+            success: function () {
+            // 用户确认分享后执行的回调函数
+            },
+            cancel: function () {
+            // 用户取消分享后执行的回调函数
+            }
+        });
+        wx.onMenuShareQZone({
+            title: we_title, // 分享标题
+            desc: we_desc, // 分享描述
+            link: we_link, // 分享链接
+            imgUrl: we_img, // 分享图标
+            success: function () {
+            // 用户确认分享后执行的回调函数
+            },
+            cancel: function () {
+            // 用户取消分享后执行的回调函数
+            }
+        });
     });
     wx.error(function(res){
         return false;
         // config信息验证失败会执行error函数，如签名过期导致验证失败，具体错误信息可以打开config的debug模式查看，也可以在返回的res参数中查看，对于SPA可以在这里更新签名。
-    });
-    var we_title = '你来！这里有七万现金等着送出去！';
-    var we_desc = '世界杯竞猜再升级，猜对猜错都有奖，再也不用去天台了…';
-    var we_img = 'http://www.beanpop.cn/img/seedo.png';
-    var we_link = window.location.href;
-    wx.onMenuShareTimeline({
-        title: we_title, // 分享标题
-        link: we_link, // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
-        imgUrl: we_img, // 分享图标
-        success: function () {
-        // 用户点击了分享后执行的回调函数
-        }
-    });
-    wx.onMenuShareAppMessage({
-        title: we_title, // 分享标题
-        desc: we_desc, // 分享描述
-        link: we_link, // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
-        imgUrl: we_img, // 分享图标
-        type: '', // 分享类型,music、video或link，不填默认为link
-        dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
-        success: function () {
-        // 用户点击了分享后执行的回调函数
-        }
-    });
-    wx.onMenuShareQQ({
-        title: we_title, // 分享标题
-        desc: we_desc, // 分享描述
-        link: we_link, // 分享链接
-        imgUrl: we_img, // 分享图标
-        success: function () {
-        // 用户确认分享后执行的回调函数
-        },
-        cancel: function () {
-        // 用户取消分享后执行的回调函数
-        }
-    });
-    wx.onMenuShareWeibo({
-        title: we_title, // 分享标题
-        desc: we_desc, // 分享描述
-        link: we_link, // 分享链接
-        imgUrl: we_img, // 分享图标
-        success: function () {
-        // 用户确认分享后执行的回调函数
-        },
-        cancel: function () {
-        // 用户取消分享后执行的回调函数
-        }
-    });
-    wx.onMenuShareQZone({
-        title: we_title, // 分享标题
-        desc: we_desc, // 分享描述
-        link: we_link, // 分享链接
-        imgUrl: we_img, // 分享图标
-        success: function () {
-        // 用户确认分享后执行的回调函数
-        },
-        cancel: function () {
-        // 用户取消分享后执行的回调函数
-        }
     });
 </script>
 </html>
