@@ -233,6 +233,7 @@
 <script src="./js/bootstrapValidator.min.js"></script>
 <script src="./js/jweixin-1.2.0.js"></script>
 <script>
+    $('body').css("overflow","hidden");
     $('#back').bootstrapValidator({
             message: 'This value is not valid',
             feedbackIcons: {
@@ -271,12 +272,15 @@
                 },
             }
         });
+        
     $('.nav-right').click(function(){
         $('#ruler').show();
         // $('.page').addClass('div-hidden');
+        $('body').css("overflow","hidden");
     })
     $('.ruler-hide').click(function(){
         $('#ruler').hide();
+        $('body').css("overflow","auto");
     })
     $('.back-btn').click(function(){
         $('.alert-danger').hide();
