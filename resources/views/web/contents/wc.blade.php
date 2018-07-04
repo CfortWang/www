@@ -24,7 +24,6 @@
     margin-right: auto;
     margin-left: auto;
 }
-/* -webkit-overflow-scrolling : touch;  */
 </style>
     <!-- Wrapper-->
     <img src="./img/wc/theme.jpg" style="width:0px;height:0px">
