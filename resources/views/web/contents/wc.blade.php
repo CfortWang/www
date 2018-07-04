@@ -24,6 +24,7 @@
     margin-right: auto;
     margin-left: auto;
 }
+/* -webkit-overflow-scrolling : touch;  */
 </style>
     <!-- Wrapper-->
     <img src="./img/wc/theme.jpg" style="width:0px;height:0px">
@@ -233,7 +234,7 @@
 <script src="./js/bootstrapValidator.min.js"></script>
 <script src="./js/jweixin-1.2.0.js"></script>
 <script>
-    $('body').css("overflow","hidden");
+    $('body,html').css("overflow","hidden");
     $('#back').bootstrapValidator({
             message: 'This value is not valid',
             feedbackIcons: {
@@ -276,11 +277,11 @@
     $('.nav-right').click(function(){
         $('#ruler').show();
         // $('.page').addClass('div-hidden');
-        $('body').css("overflow","hidden");
+        $('body,html').css("overflow","hidden");
     })
     $('.ruler-hide').click(function(){
         $('#ruler').hide();
-        $('body').css("overflow","auto");
+        $('body,html').css("overflow","auto");
     })
     $('.back-btn').click(function(){
         $('.alert-danger').hide();
