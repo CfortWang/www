@@ -69,7 +69,6 @@ class WcController extends Controller
 				$t_result = json_decode(file_get_contents($t_url));
 				$wechat_access_ticket = $t_result->ticket;
 				Cache::put('wechat_access_ticket', $t_result->ticket, 120);
-				dd($t_result->ticket);
 				$string = 'jsapi_ticket='.$wechat_access_ticket.'&noncestr='.$nonceStr.'&timestamp='.$timestamp.'&url='.'http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
 				$signature = sha1($string);
 				return $signature;
