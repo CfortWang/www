@@ -339,7 +339,7 @@
     var we_title = '你来！这里有七万现金等着送出去！';
     var we_desc = '世界杯竞猜再升级，猜对猜错都有奖，再也不用去天台了…';
     var we_img = 'http://www.beanpop.cn/img/seedo.png';
-    var we_link = 'http://www.beanpop.cn';
+    var we_link = 'http://www.beanpop.cn/worldcup2018';
     wx.onMenuShareTimeline({
         title: we_title, // 分享标题
         link: we_link, // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
