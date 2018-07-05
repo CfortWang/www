@@ -37,7 +37,7 @@
                     </div>
                     <div class="promote">
                         <div style="position: relative;">
-                            <img src="./img/wechat.png" class="promote-img" />
+                            <img src="./img/wechat_new.jpg" class="promote-img" />
                             <div class="promoto-qr-show qr-show-wechat">
                                 <img class="promoto-qr" src="./img/qrwechat.jpg">
                                 <p class="promoto-p">扫一扫关注公众号</p>

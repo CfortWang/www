@@ -1,4 +1,4 @@
-<nav class="navbar seedo-nav navbar-default" role="navigation">
+<nav class="navbar seedo-nav navbar-default shadow" role="navigation">
     <div class="container-fluid">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example-navbar-collapse" style="margin-top: 22px">
