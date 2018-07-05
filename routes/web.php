@@ -12,6 +12,8 @@
 */
 
 Route::group(['namespace' => 'Web'], function() {
+    Route::get('/policy/policy.html', 'MainController@policy')->name("www_policy");
+
     Route::get('/', 'MainController@index')->name("www_main");
     Route::get('product', 'ProductController@index')->name("www_product");
     Route::get('introduction', 'IntroductionController@index')->name("www_introduction");

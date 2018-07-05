@@ -20,4 +20,11 @@ class MainController extends Controller
         'title' => $this->title,
     ]);
   }
+
+  public function policy()
+  {
+    return view('web.contents.userPolicy', [
+      'title' => 'Policy'
+    ]);
+  }
 }
