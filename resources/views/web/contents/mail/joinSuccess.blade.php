@@ -6,6 +6,13 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 		<title>Page Title</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
+        <style type="text/css">
+			@media all and (max-width: 780px) {
+				body{
+					color: red;
+				}
+			}
+		</style>
 	</head>
 
 	<body style="margin: 0; padding: 0; font-size: 62.5%;">
