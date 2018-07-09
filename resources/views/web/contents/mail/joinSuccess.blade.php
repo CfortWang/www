@@ -24,12 +24,12 @@
 			</tr>
 			<tr>
 				<td style="padding-top: 1.5rem;">
-					<div style="font-size: 1.6rem;">王松</div>
+					<div style="font-size: 1.6rem;">王康辉</div>
 					<hr style="width: 65%; size: 1px; border: 0.5px solid #4b6db4;;" />
 				</td>
 			</tr>
 			<tr>
-				<td style="padding-top: 1rem;">兹授权<span style="margin-left: 1rem; margin-right: 1rem;">王松</span>为深圳喜豆文化发展有限公司<span style="margin-left: 1rem; margin-right: 1rem;">广东省深圳市南山区</span>销售合伙人，</td>
+				<td style="padding-top: 1rem;">兹授权<span style="margin-left: 1rem; margin-right: 1rem;">王康辉</span>为深圳喜豆文化发展有限公司<span style="margin-left: 1rem; margin-right: 1rem;">广东省深圳市南山区</span>销售合伙人，</td>
 			</tr>
 			<tr>
 				<td style="padding-top: 1rem;">获得我司在该授权区域所有产品的销售权限。</td>

@@ -19,7 +19,7 @@ class MailController extends Controller
   {
     $name = '学院君';
     Mail::send('web.contents.mail.joinSuccess',['name'=>$name],function($message){
-        $to = '18202777477@163.com';
+        $to = 'cfortwang@gmail.com';
         $message ->to($to)->subject('Seedo');
     });
     $flag = Mail::failures();
