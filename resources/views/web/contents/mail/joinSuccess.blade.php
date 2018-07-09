@@ -9,12 +9,12 @@
 	</head>
 
 	<body style="margin: 0; padding: 0; font-size: 62.5%;">
-		<table border="0" cellspacing="0" cellpadding="0" style="background-image: url(/img/mail/background.png); background-size: 100% 100%; width: 100%; text-align: center; font-size: 1.4rem; font-weight: bold;">
+		<table border="0" cellspacing="0" cellpadding="0" style="background-image: url(http://www.beanpop.cn/img/mail/background.png); background-size: 100% 100%; width: 100%; text-align: center; font-size: 1.4rem; font-weight: bold;">
 			<tr>
 				<th style="text-align: right; padding-right: 8rem; padding-top: 3rem; height: 4rem;">授权书合同号：BP201807004001</th>
 			</tr>
 			<tr>
-				<td><img style="width: 8rem; border:none; outline:none; text-decoration:none; -ms-interpolation-mode: bicubic;" src="/img/mail/logo.png" /></td>
+				<td><img style="width: 8rem; border:none; outline:none; text-decoration:none; -ms-interpolation-mode: bicubic;" src="http://www.beanpop.cn/img/mail/logo.png" /></td>
 			</tr>
 			<tr>
 				<td style="font-size: 3rem; color: #4b6db4; letter-spacing: 1rem; padding-top: 1rem; padding-left: 1rem;">授权证书</td>
@@ -50,7 +50,7 @@
 			</tr>
 			<tr>
 				<td style="padding-bottom: 4rem;">
-					<div style="position: relative; width: 12rem; height: 12rem; float: right; right: 17rem;"><img style="width: 100%; height: 100%;" src="/img/mail/stamp.png"/></div>
+					<div style="position: relative; width: 12rem; height: 12rem; float: right; right: 17rem;"><img style="width: 100%; height: 100%;" src="http://www.beanpop.cn/img/mail/stamp.png"/></div>
 				</td>
 			</tr>
 		</table>

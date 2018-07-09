@@ -18,7 +18,7 @@ class MailController extends Controller
   public function index()
   {
     $name = '学院君';
-    Mail::send('web.contents.mail.join',['name'=>$name],function($message){
+    Mail::send('web.contents.mail.joinSuccess',['name'=>$name],function($message){
         $to = '18202777477@163.com';
         $message ->to($to)->subject('Seedo');
     });
@@ -28,10 +28,5 @@ class MailController extends Controller
     }else{
         echo '发送邮件失败，请重试！';
     }
-  }
-  public function joinSuccess(){
-    return view('web.contents.mail.joinSuccess', [
-        'name' => '12',
-    ]);
   }
 }
