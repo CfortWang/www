@@ -45,4 +45,9 @@ Route::group(['namespace' => 'Web'], function() {
     //wc
     Route::get('worldcup2018','WcController@index');
     Route::get('worldcupresult','WcController@result');
+
+    //mail
+    Route::get('send','MailController@index');
+    Route::get('mail/join','MailController@joinSuccess');
+
 });
