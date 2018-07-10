@@ -53,7 +53,6 @@ class WcController extends Controller
 			$need = 12800-$sum;
 			$money = 30000;
 		}
-		$sum = 310;
 		$timestamp = time();
 		$left = $sum*5;
 		$nonceStr = str_random(random_int(20,32));
