@@ -44,7 +44,8 @@
 			</tr>
 			<tr>
 				<td style="padding-bottom: 4rem;">
-					<div style="position: relative; width: 10rem; height: 10rem; float: right; right: 10%;"><img style="width: 100%; height: 100%;" src="http://dev-www.beanpop.cn/img/mail/stamp.png"/></div>
+					<div style="width: 7rem; height: 7rem; float: left; margin-left: 10%; margin-top: 3rem;"><img style="width: 100%;" src="http://dev-www.beanpop.cn/img/mail/stamp.png"/></div>
+					<div style="width: 10rem; height: 10rem; float: right; margin-right: 10%;"><img style="width: 100%; height: 100%;" src="http://dev-www.beanpop.cn/img/mail/stamp.png"/></div>
 				</td>
 			</tr>
 		</table>
