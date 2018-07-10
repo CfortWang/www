@@ -11,7 +11,7 @@
 	<body style="margin: 0; padding: 0; font-size: 62.5%;">
 		<table border="0" cellspacing="0" cellpadding="0" style="background-image: url(http://dev-www.beanpop.cn/img/mail/background.png); background-size: 100% 100%; width: 100%; text-align: center; font-size: 1.4rem; font-weight: bold;">
 			<tr>
-				<th style="text-align: right; padding-right: 10%; padding-top: 3rem; height: 4rem;">授权书合同号：BP201807004001</th>
+				<th style="text-align: right; padding-right: 10%; padding-top: 4rem; height: 4rem;">授权书合同号：BP201807004001</th>
 			</tr>
 			<tr>
 				<td><img style="width: 8rem; border:none; outline:none; text-decoration:none; -ms-interpolation-mode: bicubic;" src="http://dev-www.beanpop.cn/img/mail/logo.png" /></td>
