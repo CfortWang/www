@@ -11,7 +11,7 @@
     <meta name=”keywords” content="喜豆，Bean POP，喜豆Bean POP,SEEDO，喜豆文化发展有限公司官网，喜豆文化发展有限公司，喜豆文化，互动营销平台，广告，营销，传播。" />
     <meta name=”description” content="喜豆是一家运用区块链技术的互动竞猜营销平台，用全新的运营理念和营销思维，专注于服务消费品牌及零售业客户，为品牌及零售业客户带来二次销售及连带销售，建立线上获利+线下消费的生态，刺激线上消费、助力线下实体经济。通过构筑销售合伙人模式，将互联网产品思维与传统零售优势相结合，为商家和品牌创造价值。" />
     <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./css/wc.css?version=1">
+    <link rel="stylesheet" href="./css/wc.css?version=2">
     <link rel="stylesheet" type="text/css" href="./css/bootstrapValidator.css" />
     <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
     <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -53,7 +53,7 @@
                     <img src="./img/wc/wc-top.png" style="max-height: 120px;">
                 </div>
                 <div class="back-top-3">
-                    每邀请一人，奖金多得6元
+                    每邀请一人，奖金池多6元
                 </div>
             </div>
             <div class="back-div-title">
@@ -66,13 +66,13 @@
                         <div class="money-div">{{intval($left/10000)}}</div>
                         <div class="money-div">{{$left/1000%10}}</div>
                         <div class="money-div">{{$left/100%10}}</div>
-                        <div class="money-div">{{$left/10%10}}</div>
-                        <div class="money-div">{{$left%10}}</div>
+                        <div class="money-div money-div-2">{{$left/10%10}}</div>
+                        <div class="money-div money-div-1">{{$left%10}}</div>
                     @elseif (strlen($left)==4)
                         <div class="money-div">{{intval($left/1000)}}</div>
                         <div class="money-div">{{$left/100%10}}</div>
-                        <div class="money-div">{{$left/10%10}}</div>
-                        <div class="money-div">{{$left%10%10}}</div>
+                        <div class="money-div money-div-2">{{$left/10%10}}</div>
+                        <div class="money-div money-div-1">{{$left%10%10}}</div>
                     @endif
                     <div class="money-div">元</div>
                        
@@ -325,6 +325,12 @@
                     $('.select-field').hide();
                     if(response.data==1){
                         $('.back-div-bottom-span').html(parseInt($('.back-div-bottom-span').html())-1);
+                        if($('.money-div-1').html()==5){
+                            $('.money-div-1').html(0); 
+                            $('.money-div-2').html(parseInt($('.money-div-2').html())+1); 
+                        }else{
+                            $('.money-div-1').html(5); 
+                        }
                     }
                     $('.select-field').each(function () { 
                         $(this).next().html($(this).val());
