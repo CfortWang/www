@@ -23,13 +23,54 @@ class WcController extends Controller
 	{
 		$data = WCGame::where('status','progress')->get();
 		$sum = WCEntry::where('seq','>',0)->distinct('phone_num')->count('phone_num');
+		$used = 0;
+		$need = 100-$sum;
+		$money = 600;
+		if($sum>100){
+			$need = 200-$sum;
+			$money = 1000;
+			$used =  $used+600;
+		}
+		if($sum>200){
+			$need = 400-$sum;
+			$money = 2000;
+			$used =  $used+1000;
+		}
+		if($sum>400){
+			$need = 800-$sum;
+			$money = 3300;
+			$used =  $used+2000;
+		}
+		if($sum>800){
+			$need = 1600-$sum;
+			$money = 5600;
+			$used =  $used+3300;
+		}
+		if($sum>1600){
+			$need = 3200-$sum;
+			$money = 9900;
+			$used =  $used+5600;
+		}
+		if($sum>3200){
+			$need = 6400-$sum;
+			$money = 19200;
+			$used =  $used+9900;
+		}
+		if($sum>6400){
+			$need = 12800-$sum;
+			$money = 30000;
+			$used =  $used+19200;
+		}
+		$left = 70000-$used;
 		$timestamp = time();
 		$nonceStr = str_random(random_int(20,32));
 		$signature = $this->wechat_signature($timestamp,$nonceStr);
 		return view('web.contents.wc', [
 			'title' => '竞猜',
 			'data'  => $data,
-			'sum'   => $sum,
+			'need'   => $need,
+			'left'   => $left,
+			'money'   => $money,
 			'appId' => env('WECHAT_GROUP_APP_ID', ''),
 			'signature' => $signature,
 			'timestamp' => $timestamp,

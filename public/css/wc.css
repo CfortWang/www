@@ -11,6 +11,7 @@
     float: right;
     font-size: 16px;
     margin-right: 8px;
+    margin-top: 8px;
 }
 .back-contain{
     max-width: 1280px;
@@ -18,8 +19,19 @@
     background-color: #f8f8f8;
 }
 .back-div-img{
-    min-height: 150px;
-    border: 1px solid #f8f8f8;
+    max-height: 120px;
+    text-align: center;
+    clear: both;
+}
+.back-top{
+    background: #ffcb00;
+}
+.back-top-3{
+    text-align: center;
+    font-size:20px;
+    color: #ee6807;
+    padding: 8px 0;
+    font-weight: 700;
 }
 .navbar{
     margin-bottom: 0;
@@ -27,7 +39,7 @@
 .back-div-title{
     text-align: center;
     background: white;
-    padding: 20px;
+    padding-top: 20px;
 }
 .back-div-title-people{
     padding-top: 10px;
@@ -38,7 +50,7 @@
     font-weight: 700;
 }
 .back-div-line{
-    min-height: 20px;
+    min-height: 1px;
 }
 .back-div-from-div-middle{
     width: 20%;
@@ -57,10 +69,10 @@
 .middle-circle{
     background: #ffcb00;
     border: 1px solid #ffcb00;
-    width: 80px;
-    height: 80px;
+    width: 60px;
+    height: 60px;
     border-radius: 40px;
-    line-height: 70px;
+    line-height: 50px;
     font-size: 32px;
     margin-top: -100px;
 }
@@ -97,9 +109,7 @@
     background-color: rgba(0, 0, 0, 0.2);
     overflow-y: scroll;
 }
-#ruler{
-    display: block;
-}
+
 .ruler-middle{
     background: white;
     padding: 20px;
@@ -152,6 +162,8 @@
 .back-div-from-p{
     padding: 22px 0;
     border-bottom: 1px solid #d8d8d8;
+    width: 80%;
+    margin: 0 auto;
 }
 li{
     font-weight: 700;
@@ -203,4 +215,32 @@ li{
 
 #error a{
     color:#333;
+}
+.back-div-top{
+    width: 80%;
+    margin: 0 auto;
+    background: #ee6807;
+    min-height: 100px;
+    border-radius: 6px;
+}
+.money-div{
+    background: #fff;
+    font-size: 24px;
+    color: #ee6807;
+    border-radius: 4px;
+    display: inline-block;
+    width: 36.8px;
+    font-size: 26px;
+}
+.back-div-bottom-span{
+    color: #ee6807;
+    background: #fff1b8;
+}
+.back-div-bottom-money{
+    background: #fff1b8;
+    color: #ee6807
+}
+.back-div-bottom{
+    padding-top: 20px;
+    font-size: 18px;
 }

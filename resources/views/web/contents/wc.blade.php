@@ -26,9 +26,9 @@
 }
 </style>
     <!-- Wrapper-->
-    <img src="./img/wc/theme.jpg" style="width:0px;height:0px">
+    <img src="./img/wc/wc-top.png" style="width:0px;height:0px;float:right">
     <div class="page">
-        <div id="wrapper">
+        <!-- <div id="wrapper">
             <div id="page-wrapper" class="gray-bg">
                 <nav class="navbar seedo-nav navbar-default" role="navigation">
                     <div class="container-fluid">
@@ -43,17 +43,43 @@
                     </div>
                 </nav>
             </div>
-        </div>
+        </div> -->
         <div class="back-contain">
-            <div class="back-div-img">
-                <img src="./img/wc/theme.jpg" style="width:100%">
+            <div class="back-top">
+                <div>
+                    <span class="nav-right"><img src="./img/wc/icon.png" style="width: 20px;">规则</span>
+                </div>
+                <div class="back-div-img">
+                    <img src="./img/wc/wc-top.png" style="max-height: 120px;">
+                </div>
+                <div class="back-top-3">
+                    每邀请一人，奖金多得6元
+                </div>
             </div>
             <div class="back-div-title">
-                <div class="back-div-title-time">
-                    2018年{{date('m')}}月{{date('d')}}日 赛程竞猜
+                <div class="back-div-top">
+                    <div style="padding: 8px 0;font-size: 20px;font-weight: 700;color: white;">
+                        本场奖金池
+                    </div>
+                    <div>
+                    @if (strlen($left)==5)
+                        <div class="money-div">{{intval($left/10000)}}</div>
+                        <div class="money-div">{{$left/1000%10}}</div>
+                        <div class="money-div">{{$left/100%10}}</div>
+                        <div class="money-div">{{$left/10%10}}</div>
+                        <div class="money-div">{{$left%10}}</div>
+                    @elseif (strlen($left)==4)
+                        <div class="money-div">{{intval($left/1000)}}</div>
+                        <div class="money-div">{{$left/100%10}}</div>
+                        <div class="money-div">{{$left/10%10}}</div>
+                        <div class="money-div">{{$left%10%10}}</div>
+                    @endif
+                    <div class="money-div">元</div>
+                       
+                    </div>
                 </div>
-                <div class="back-div-title-people">
-                    本次竞猜人数：<span class="back-dev">{{$sum}}</span>人
+                <div class="back-div-bottom">
+                    还差<span class="back-div-bottom-span"> {{$need}} </span>人即可瓜分<span class="back-div-bottom-money"> {{$money}} </span>元
                 </div>
             </div>
             <div class="back-div-line"></div>
