@@ -319,10 +319,13 @@
                 type: 'POST',
                 data:data,
                 success: function(response){
+                    console.log(response)
                     $('#fin').show();
                     $('.for-hidden').hide();
                     $('.select-field').hide();
-                    $('.back-dev').html(parseInt($('.back-dev').html())+1);
+                    if(response.data==1){
+                        $('.back-div-bottom-span').html(parseInt($('.back-div-bottom-span').html())-1);
+                    }
                     $('.select-field').each(function () { 
                         $(this).next().html($(this).val());
                     });
