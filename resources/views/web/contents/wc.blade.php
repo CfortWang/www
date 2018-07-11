@@ -53,7 +53,7 @@
                     <img src="./img/wc/wc-top.png" style="max-height: 120px;">
                 </div>
                 <div class="back-top-3">
-                    每邀请一人，奖金池多6元
+                    每邀请一人，奖金池多{{$price}}元
                 </div>
             </div>
             <div class="back-div-title">
@@ -323,6 +323,7 @@
                     $('#fin').show();
                     $('.for-hidden').hide();
                     $('.select-field').hide();
+                    console.log(response.data)
                     if(response.data==1){
                         $('.back-div-bottom-span').html(parseInt($('.back-div-bottom-span').html())-1);
                         if($('.money-div-1').html()==5){

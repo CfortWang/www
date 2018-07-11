@@ -55,6 +55,7 @@ class WcController extends Controller
 		}
 		$timestamp = time();
 		$left = $sum*5;
+		$price = intval(($money-$left)/$need);
 		$nonceStr = str_random(random_int(20,32));
 		$signature = $this->wechat_signature($timestamp,$nonceStr);
 		return view('web.contents.wc', [
@@ -63,6 +64,7 @@ class WcController extends Controller
 			'need'   => $need,
 			'left'   => $left,
 			'money'   => $money,
+			'price'  => $price,
 			'appId' => env('WECHAT_GROUP_APP_ID', ''),
 			'signature' => $signature,
 			'timestamp' => $timestamp,

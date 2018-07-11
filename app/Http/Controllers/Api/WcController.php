@@ -57,7 +57,7 @@ class WcController extends Controller
 				return $this->responseConflict('数据未知');
 			}
 		}
-		$count = WCEntry::where('wc_game',$key)->where('phone_num',$post['phone_num'])->count();
+		$count = WCEntry::where('phone_num',$post['phone_num'])->count();
 		return $this->responseOk('成功',$count);
 	}
 }
