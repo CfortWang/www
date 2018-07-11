@@ -326,11 +326,11 @@
                     console.log(response.data)
                     if(response.data==1){
                         $('.back-div-bottom-span').html(parseInt($('.back-div-bottom-span').html())-1);
-                        if($('.money-div-1').html()==5){
-                            $('.money-div-1').html(0); 
+                        if(parseInt($('.money-div-1').html())+{{$price}}>9){
+                            $('.money-div-1').html((parseInt($('.money-div-1').html())+{{$price}})%10); 
                             $('.money-div-2').html(parseInt($('.money-div-2').html())+1); 
                         }else{
-                            $('.money-div-1').html(5); 
+                            $('.money-div-1').html((parseInt($('.money-div-1').html())+{{$price}})); 
                         }
                     }
                     $('.select-field').each(function () { 

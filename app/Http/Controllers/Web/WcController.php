@@ -25,37 +25,44 @@ class WcController extends Controller
 		$sum = WCEntry::where('seq','>',0)->distinct('phone_num')->count('phone_num');
 		$need = 100-$sum;
 		$money = 600;
+		$price = 6;
 		if($sum>100){
 			$need = 200-$sum;
 			$money = 1000;
+			$price = intval((1000-600)/100);
 		}
 		if($sum>200){
 			$need = 400-$sum;
 			$money = 2000;
+			$price = intval((2000-1000)/200);
 		}
 		if($sum>400){
 			$need = 800-$sum;
 			$money = 3300;
+			$price = intval(($money-2000)/400);
 		}
 		if($sum>800){
 			$need = 1600-$sum;
 			$money = 5600;
+			$price = intval(($money-3300)/800);
 		}
 		if($sum>1600){
 			$need = 3200-$sum;
 			$money = 9900;
+			$price = intval(($money-5600)/1600);
 		}
 		if($sum>3200){
 			$need = 6400-$sum;
 			$money = 19200;
+			$price = intval(($money-9900)/3200);
 		}
 		if($sum>6400){
 			$need = 12800-$sum;
 			$money = 30000;
+			$price = intval(($money-19200)/6400);
 		}
 		$timestamp = time();
-		$left = $sum*5;
-		$price = intval(($money-$left)/$need);
+		$left = $sum*$price;
 		$nonceStr = str_random(random_int(20,32));
 		$signature = $this->wechat_signature($timestamp,$nonceStr);
 		return view('web.contents.wc', [
