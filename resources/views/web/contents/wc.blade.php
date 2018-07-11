@@ -323,7 +323,6 @@
                     $('#fin').show();
                     $('.for-hidden').hide();
                     $('.select-field').hide();
-                    console.log(response.data)
                     if(response.data==1){
                         $('.back-div-bottom-span').html(parseInt($('.back-div-bottom-span').html())-1);
                         if(parseInt($('.money-div-1').html())+{{$price}}>9){
